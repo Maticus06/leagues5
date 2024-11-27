@@ -1334,19 +1334,52 @@ document.addEventListener("DOMContentLoaded", function () {
     // Recommendations for Matt
     const mattRecommendations = {
         relics: [
-            { id: "relic1a", reason: "Minimizes grind in Mining and gathers valuable resources." },
-            { id: "relic2a", reason: "Provides passive herb gathering and improves potion crafting efficiency." },
-            { id: "relic3c", reason: "Allows teleportation to clue steps and STASH units for quick clue-solving." },
-            { id: "relic4a", reason: "Provides passive money-making and efficient Prayer training." },
-            { id: "relic5b", reason: "Massively reduces time spent on skilling." },
-            { id: "relic6b", reason: "Eliminates banking trips, enhancing efficiency." },
-            { id: "relic7b", reason: "Unlocks all spells and prayers for combat versatility." },
-            { id: "relic8b", reason: "Adds a fun companion to simplify combat." }
+            {
+                id: "relic1b",
+                reason: "Friendly Forager is invaluable for efficient skilling, as it passively gathers herbs during resource collection from Woodcutting, Fishing, and Mining. This ensures you always have the necessary Herblore ingredients for creating potions, saving inventory space and reducing the need to actively farm herbs. With this relic, you can focus on core gameplay without worrying about sourcing Herblore materials, making it a perfect choice for Morytania, where herb-heavy Slayer tasks and Barrows runs will benefit from potions."
+            },
+            {
+                id: "relic2a",
+                reason: "Provides passive herb gathering and improves potion crafting efficiency. Additionally, its ability to store herbs from activities like Mining or Fishing makes it a seamless upgrade when focusing on multitasking skill progression."
+            },
+            {
+                id: "relic3c",
+                reason: "Clue Compass allows instant travel to clue scroll steps and STASH units, drastically reducing clue-solving time. This synergizes perfectly with your regions like Kandarin (Seers' Village clue steps) and Fremennik (clues from Slayer tasks), making clue scroll progression efficient and rewarding."
+            },
+            {
+                id: "relic4a",
+                reason: "Golden God enables passive money-making through Alchemy spells and maximizes Prayer XP gains by offering large amounts of gold to altars. It works particularly well with regions like Morytania, where Prayer is essential for bosses like Barrows Brothers."
+            },
+            {
+                id: "relic5b",
+                reason: "Production Master allows bulk processing of materials such as ores, logs, and potions. This is ideal for players who want to spend less time on skilling and more time engaging with bosses or Slayer tasks in Fremennik and Kandarin."
+            },
+            {
+                id: "relic6b",
+                reason: "Banker's Note removes the need for trips to the bank, allowing you to focus entirely on combat and skilling. It’s especially helpful when juggling activities like Slayer tasks or bossing in Morytania, where inventory management can be challenging."
+            },
+            {
+                id: "relic7b",
+                reason: "Grimoire unlocks all spellbooks and prayers, offering unparalleled combat versatility. This pairs beautifully with Morytania and Kandarin content, providing access to Ancient Magicks for blood spells and powerful prayers like Piety."
+            },
+            {
+                id: "relic8b",
+                reason: "Guardian offers a combat companion to simplify encounters with challenging bosses like Dagannoth Kings or Barrows. This relic adds both fun and utility, ensuring you can handle higher-level content with ease."
+            }
         ],
         regions: [
-            { id: "kandarin", reason: "First: Diverse content with enjoyable activities and manageable bosses." },
-            { id: "morytania", reason: "Second: Engaging bosses like Barrows and additional Slayer opportunities." },
-            { id: "fremennik", reason: "Third: Versatile combat challenges and valuable drops." }
+            {
+                id: "kandarin",
+                reason: "First: Kandarin offers diverse content, including the Ranged training hotspot of Seers' Village and bosses like Zulrah. It’s a crucial region for clue-solving, Slayer progression, and gathering powerful Ranged gear."
+            },
+            {
+                id: "morytania",
+                reason: "Second: Morytania is essential for Barrows, Slayer tasks, and Prayer training. With resources like swamp herbs and bosses like Barrows Brothers, this region complements your Magic-focused playstyle and helps build an efficient progression path."
+            },
+            {
+                id: "fremennik",
+                reason: "Third: Fremennik provides access to Dagannoth Kings and valuable drops like rings. The region also offers diverse Slayer tasks and opportunities to test combat mastery with engaging content."
+            }
         ],
         combatMasteries: [
             {
@@ -1392,64 +1425,67 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
-    // Recommendations for Kevin
+    // Recommendations for Kevin (Updated Tier 3 to Clue Compass)
     const kevinRecommendations = {
         relics: [
-            { id: "relic1a", reason: "Improves early-game resource gathering for Melee builds." },
-            { id: "relic2a", reason: "Ensures efficient use of potions and secondary ingredients." },
-            { id: "relic3b", reason: "Improves access to banks for better inventory management." },
-            { id: "relic4a", reason: "Allows passive money-making and effective Prayer use for raids." },
-            { id: "relic5b", reason: "Speeds up production of potions and supplies for consistent raiding." },
-            { id: "relic6b", reason: "Eliminates inventory clutter during high-level PvM activities." },
-            { id: "relic7b", reason: "Provides flexibility with all spells and prayers unlocked." },
-            { id: "relic8a", reason: "Boosts survivability with the Last Stand ability for high-damage encounters." }
+            {
+                id: "relic1a",
+                reason: "Improves early-game resource gathering for Melee builds. The ability to bank ores automatically saves time and lets you focus on combat and progression."
+            },
+            {
+                id: "relic2a",
+                reason: "Ensures efficient use of potions and secondary ingredients. Combined with potion-heavy combat in Morytania, this relic optimizes Herblore output and reduces downtime."
+            },
+            {
+                id: "relic3c",
+                reason: "Clue Compass allows instant travel to clue scroll steps and STASH units, streamlining clue-solving for high-tier rewards. This synergizes with your progression path in Morytania and Fremennik, where clue scrolls are abundant."
+            },
+            {
+                id: "relic4a",
+                reason: "Allows passive money-making and effective Prayer use for raids. Morytania’s heavy Prayer requirements and Theatre of Blood encounters benefit greatly from this relic."
+            },
+            {
+                id: "relic5b",
+                reason: "Speeds up production of potions and supplies for consistent raiding. With Theatre of Blood and Slayer tasks in mind, this relic ensures efficient preparation."
+            },
+            {
+                id: "relic6b",
+                reason: "Eliminates inventory clutter during high-level PvM activities. It’s especially useful for longer boss fights and raids where inventory space is critical."
+            },
+            {
+                id: "relic7b",
+                reason: "Provides flexibility with all spells and prayers unlocked. This is ideal for Tirannwn and Fremennik, offering adaptability in hybrid combat scenarios."
+            },
+            {
+                id: "relic8a",
+                reason: "Boosts survivability with the Last Stand ability for high-damage encounters like Inferno or Theatre of Blood."
+            }
         ],
         regions: [
-            { id: "morytania", reason: "First: Essential for Melee-focused PvM and raids like Theatre of Blood." },
-            { id: "tirannwn", reason: "Second: Provides access to the Gauntlet and Crystal Weaponry for versatility." },
-            { id: "fremennik", reason: "Third: Versatile content including Dagannoth Kings and rings for Melee builds." }
+            {
+                id: "morytania",
+                reason: "First: Essential for Melee-focused PvM and raids like Theatre of Blood. Resources like swamp herbs and Slayer tasks are critical for progression."
+            },
+            {
+                id: "tirannwn",
+                reason: "Second: Provides access to the Gauntlet and Crystal Weaponry for versatility in combat styles. Tirannwn is also home to high-value Slayer tasks and resources."
+            },
+            {
+                id: "fremennik",
+                reason: "Third: Versatile content including Dagannoth Kings and rings for Melee builds. Fremennik also offers rich combat opportunities and clue-solving benefits."
+            }
         ],
         combatMasteries: [
-            {
-                id: "melee1",
-                reason: "1. Unlock first to ensure consistent Melee DPS, crucial for Morytania Slayer tasks and Theatre of Blood."
-            },
-            {
-                id: "melee2",
-                reason: "2. Adds echo hits for additional DPS, which are especially useful in Tirannwn Gauntlet runs."
-            },
-            {
-                id: "melee3",
-                reason: "3. Reduces Melee attack intervals, enhancing overall efficiency for Fremennik bosses."
-            },
-            {
-                id: "magic1",
-                reason: "4. Boosts Magic damage on high rolls, providing flexibility for hybrid combat at Gauntlet or Theatre of Blood."
-            },
-            {
-                id: "magic2",
-                reason: "5. Enhances Magic max hits for hybrid scenarios, particularly effective in Tirannwn."
-            },
-            {
-                id: "ranged1",
-                reason: "6. Provides consistent Ranged DPS for Fremennik bosses like Dagannoth Kings."
-            },
-            {
-                id: "ranged2",
-                reason: "7. Boosts Ranged max hits during sustained fights, complementing Fremennik combat challenges."
-            },
-            {
-                id: "melee4",
-                reason: "8. Passive healing during prolonged Melee combat, ensuring survivability in Theatre of Blood."
-            },
-            {
-                id: "melee5",
-                reason: "9. Speeds up Melee attacks, boosting DPS efficiency for high-end encounters."
-            },
-            {
-                id: "melee6",
-                reason: "10. Unlock final tier for massive chainable DPS, ideal for Inferno or Theatre of Blood bosses."
-            }
+            { id: "melee1", reason: "1. Unlock first to ensure consistent Melee DPS, crucial for Morytania Slayer tasks and Theatre of Blood." },
+            { id: "melee2", reason: "2. Adds echo hits for additional DPS, which are especially useful in Tirannwn Gauntlet runs." },
+            { id: "melee3", reason: "3. Reduces Melee attack intervals, enhancing overall efficiency for Fremennik bosses." },
+            { id: "magic1", reason: "4. Boosts Magic damage on high rolls, providing flexibility for hybrid combat at Gauntlet or Theatre of Blood." },
+            { id: "magic2", reason: "5. Enhances Magic max hits for hybrid scenarios, particularly effective in Tirannwn." },
+            { id: "ranged1", reason: "6. Provides consistent Ranged DPS for Fremennik bosses like Dagannoth Kings." },
+            { id: "ranged2", reason: "7. Boosts Ranged max hits during sustained fights, complementing Fremennik combat challenges." },
+            { id: "melee4", reason: "8. Passive healing during prolonged Melee combat, ensuring survivability in Theatre of Blood." },
+            { id: "melee5", reason: "9. Speeds up Melee attacks, boosting DPS efficiency for high-end encounters." },
+            { id: "melee6", reason: "10. Unlock final tier for massive chainable DPS, ideal for Inferno or Theatre of Blood bosses." }
         ]
     };
 
@@ -1499,6 +1535,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("resetButton").addEventListener("click", resetChoices);
     });
 </script>
+
 
 
 
