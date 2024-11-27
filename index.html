@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Leagues V: Raging Echoes Plan</title>
@@ -12,9 +13,14 @@
             margin: 0;
             line-height: 1.6;
         }
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             color: #f0c75e;
         }
+
         .tabs {
             position: sticky;
             top: 0;
@@ -23,6 +29,7 @@
             display: flex;
             border-bottom: 2px solid #444444;
         }
+
         .tab {
             flex: 1;
             padding: 10px 20px;
@@ -33,20 +40,25 @@
             font-weight: bold;
             border-right: 1px solid #444444;
         }
+
         .tab.active {
             background-color: #444444;
             color: #f0c75e;
         }
+
         .tab:last-child {
             border-right: none;
         }
+
         .section {
             padding: 20px;
             display: none;
         }
+
         .section.active {
             display: block;
         }
+
         /* Collapsible content styling */
         .collapsible {
             background-color: #333333;
@@ -60,9 +72,12 @@
             font-size: 18px;
             margin-top: 10px;
         }
-        .active, .collapsible:hover {
+
+        .active,
+        .collapsible:hover {
             background-color: #444444;
         }
+
         .content {
             padding: 0 15px;
             max-height: 0;
@@ -70,66 +85,72 @@
             transition: max-height 0.2s ease-out;
             background-color: #262626;
         }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         li {
             margin-bottom: 10px;
         }
+
         label {
             cursor: pointer;
         }
+
         .checkbox {
             position: relative;
             top: 3px;
             margin-right: 10px;
         }
+
         /* Player Profiles Section Styling */
-.player-profiles {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 20px;
-    padding: 20px;
-    background-color: #262626;
-    border: 1px solid #444444;
-    border-radius: 10px;
-    gap: 20px;
-    color: #e0e0d1;
-}
+        .player-profiles {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+            padding: 20px;
+            background-color: #262626;
+            border: 1px solid #444444;
+            border-radius: 10px;
+            gap: 20px;
+            color: #e0e0d1;
+        }
 
-.player-profile {
-    flex: 1;
-    padding: 10px;
-    background-color: #1a1a1a;
-    border: 1px solid #444444;
-    border-radius: 8px;
-    box-shadow: 0 0 10px 2px #333333;
-}
+        .player-profile {
+            flex: 1;
+            padding: 10px;
+            background-color: #1a1a1a;
+            border: 1px solid #444444;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 2px #333333;
+        }
 
-.player-profile h3 {
-    color: #f0c75e;
-    margin-bottom: 10px;
-}
+        .player-profile h3 {
+            color: #f0c75e;
+            margin-bottom: 10px;
+        }
 
-.player-profile p {
-    margin: 5px 0;
-    font-size: 14px;
-    line-height: 1.5;
-}
+        .player-profile p {
+            margin: 5px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .player-profiles {
-        flex-direction: column;
-    }
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .player-profiles {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
+
 <body>
     <h1>Leagues V: Raging Echoes Plan</h1>
-        <div class="player-profiles">
+    <div class="player-profiles">
         <div class="player-profile" id="matt-profile">
             <h3>Matt's Play Style</h3>
             <p><strong>Primary Focus:</strong> Enjoyment and avoiding grindier aspects.</p>
@@ -659,9 +680,9 @@
 
     </div>
 
-    
-    
-        <div class="section" id="combat-masteries">
+
+
+    <div class="section" id="combat-masteries">
         <h2>Combat Masteries</h2>
         <p>Combat Masteries offer specialized boosts to combat styles. Players can unlock up to 10 mastery points by completing specific tasks. Each mastery tier builds upon the previous one in its respective combat style. A unique passive bonus is unlocked upon reaching the first mastery in any style.</p>
 
@@ -980,7 +1001,7 @@
         </div>
     </div>
 
-        <div class="section" id="regions">
+    <div class="section" id="regions">
         <h2>Regions</h2>
         <p>You can unlock up to three additional regions beyond the starting areas of Misthalin and Karamja. Each region offers unique benefits and activities. Choose based on your preferred playstyle and goals.</p>
 
@@ -1205,49 +1226,16 @@
         </div>
     </div>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <script>
+
+
+
+
+
+
+
+
+
+    <script>
         // Checkbox state persistence
         function saveCheckboxState() {
             const checkboxes = document.querySelectorAll('.checkbox');
@@ -1274,7 +1262,7 @@
             setupCollapsibles();
         });
     </script>
-        <script>
+    <script>
         // Tab navigation
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -1287,7 +1275,7 @@
 
         // Collapsible content
         document.querySelectorAll('.collapsible').forEach(collapsible => {
-            collapsible.addEventListener('click', function () {
+            collapsible.addEventListener('click', function() {
                 this.classList.toggle('active');
                 const content = this.nextElementSibling;
                 if (content.style.maxHeight) {
@@ -1299,348 +1287,497 @@
         });
     </script>
 
-    
-    
-    
-    
+
+
+
+
     <!--- HIGHLIGHTS -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Create and style the recommendation buttons
-    const buttons = [
-        { id: "mattButton", text: "Matt's Recommendations", bottom: "140px" },
-        { id: "kevinButton", text: "Kevin's Recommendations", bottom: "100px" },
-        { id: "casualButton", text: "The Filthy Casual", bottom: "60px" },
-        { id: "resetButton", text: "Reset Choices", bottom: "20px", color: "#e74c3c", textColor: "#ffffff" }
-    ];
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Create and style the recommendation buttons
+            const buttons = [{
+                    id: "mattRangedButton",
+                    text: "Matt but Range",
+                    bottom: "180px"
+                },
+                {
+                    id: "mattButton",
+                    text: "Matt's Recommendations",
+                    bottom: "140px"
+                },
+                {
+                    id: "kevinButton",
+                    text: "Kevin's Recommendations",
+                    bottom: "100px"
+                },
+                {
+                    id: "casualButton",
+                    text: "The Filthy Casual",
+                    bottom: "60px"
+                },
+                {
+                    id: "resetButton",
+                    text: "Reset Choices",
+                    bottom: "20px",
+                    color: "#e74c3c",
+                    textColor: "#ffffff"
+                }
+            ];
 
-    buttons.forEach(({ id, text, bottom, color = "#f0c75e", textColor = "#1a1a1a" }) => {
-        const button = document.createElement("button");
-        button.textContent = text;
-        button.id = id;
-        button.style.position = "fixed";
-        button.style.bottom = bottom;
-        button.style.right = "20px";
-        button.style.padding = "10px 15px";
-        button.style.backgroundColor = color;
-        button.style.color = textColor;
-        button.style.border = "none";
-        button.style.borderRadius = "5px";
-        button.style.cursor = "pointer";
-        button.style.fontWeight = "bold";
-        button.style.zIndex = 1000;
-        document.body.appendChild(button);
-    });
+            buttons.forEach(({
+                id,
+                text,
+                bottom,
+                color = "#f0c75e",
+                textColor = "#1a1a1a"
+            }) => {
+                const button = document.createElement("button");
+                button.textContent = text;
+                button.id = id;
+                button.style.position = "fixed";
+                button.style.bottom = bottom;
+                button.style.right = "20px";
+                button.style.padding = "10px 15px";
+                button.style.backgroundColor = color;
+                button.style.color = textColor;
+                button.style.border = "none";
+                button.style.borderRadius = "5px";
+                button.style.cursor = "pointer";
+                button.style.fontWeight = "bold";
+                button.style.zIndex = 1000;
+                document.body.appendChild(button);
+            });
 
-        // Recommendations for Matt
-    const mattRecommendations = {
-        relics: [
-            {
-                id: "relic1a",
-                reason: "Power Miner: The Echo Pickaxe allows you to bank ores automatically and mine more efficiently. This is perfect for early skilling progression with rune essence (Morytania for Barrows teleport tablets) or gathering higher-tier ores for crafting and smithing in Fremennik."
-            },
-            {
-                id: "relic2a",
-                reason: "Friendly Forager: Enables passive herb gathering from activities like Woodcutting and Fishing. This complements Morytania (Barrows supply runs and Slayer potions) and Fremennik (herb-heavy Slayer tasks). The 90% secondary preservation ensures cost-efficient potion crafting."
-            },
-            {
-                id: "relic3c",
-                reason: "Clue Compass: Accelerates clue-solving by teleporting to STASH units and steps. This is valuable for Barrows runs in Morytania, where monsters frequently drop clue scrolls, or for Fremennik Slayer tasks with clue rewards."
-            },
-            {
-                id: "relic4a",
-                reason: "Golden God: Provides unlimited High Alchemy and Prayer XP from coins. Use this during Barrows to alch items like bolt racks, weapons, and gear, turning trash loot into GP while restoring Prayer at altars for extended combat sessions."
-            },
-            {
-                id: "relic5b",
-                reason: "Production Master: Automates potion-making, arrow-fletching, and gear crafting. This is a time-saver for Morytania and Fremennik prep activities, where Slayer tasks and boss fights demand large amounts of supplies."
-            },
-            {
-                id: "relic6b",
-                reason: "Banker's Note: Avoids unnecessary banking trips, crucial during Slayer tasks in Morytania or Fremennik and extended boss fights like Dagannoth Kings. It also ensures uninterrupted resource gathering in Fremennik caves."
-            },
-            {
-                id: "relic7b",
-                reason: "Grimoire: Unlocks all prayers and spellbooks, granting flexibility for Blood Spells at Barrows or Augury/Rigour for efficient Slayer tasks and bosses like Zulrah in Kandarin."
-            },
-            {
-                id: "relic8b",
-                reason: "Guardian: Summons a companion for PvM encounters, highly effective for multi-boss fights like Dagannoth Kings or Slayer tasks requiring AoE combat. The Guardian’s consistent damage output boosts efficiency in Fremennik caves."
-            }
-        ],
-        regions: [
-            {
-                id: "kandarin",
-                reason: "First: Access Zulrah for steady profits, Thermonuclear Smoke Devil for Slayer upgrades, and Seers' Village herb patches for Friendly Forager. The region also offers accessible clue scroll rewards via PvM like Zulrah or Slayer."
-            },
-            {
-                id: "morytania",
-                reason: "Second: Unlock Barrows for gear upgrades and Slayer monsters like Abyssal Demons for whips. The region's herb patches and Slayer-friendly environment (Gargoyles, Nechryaels) synergize well with Friendly Forager and potion crafting."
-            },
-            {
-                id: "fremennik",
-                reason: "Third: Provides Dagannoth Kings for best-in-slot rings like Berserker or Seer's Ring. This region also supports Melee and Ranged training via rock crabs and offers high-value resources for crafting."
-            }
-        ],
-        combatMasteries: [
-            {
-                id: "magic1",
-                reason: "1. Unlock first for boosted Magic damage rolls, which are highly effective at Barrows in Morytania. This early boost aligns with the high availability of Magic training resources in Kandarin and Morytania."
-            },
-            {
-                id: "magic2",
-                reason: "2. Increases Magic max hits by leveraging longer attack delays, great for sustained boss fights in Kandarin and Fremennik, including Dagannoth Kings."
-            },
-            {
-                id: "magic3",
-                reason: "3. Reduces Magic attack intervals, enabling faster DPS. This becomes crucial for fast-paced fights at Zulrah or Slayer tasks in Fremennik."
-            },
-            {
-                id: "ranged1",
-                reason: "4. Provides consistent Ranged damage output, perfect for early Barrows fights and Slayer tasks where Magic isn't as effective."
-            },
-            {
-                id: "ranged2",
-                reason: "5. Boosts Ranged max hits during consecutive attacks, complementing Kandarin's strong Ranged training areas."
-            },
-            {
-                id: "ranged3",
-                reason: "6. Reduces Ranged attack intervals for consistent DPS at high-end bosses like Zulrah or King Black Dragon."
-            },
-            {
-                id: "melee1",
-                reason: "7. Improves Melee consistency, useful for Slayer tasks and bosses in Fremennik and Kandarin."
-            },
-            {
-                id: "melee2",
-                reason: "8. Adds echo hits for extra damage output, which works well against tanky bosses like Dagannoth Kings."
-            },
-            {
-                id: "magic4",
-                reason: "9. Passive healing during Magic attacks ensures sustained combat efficiency at long fights like Barrows or Slayer."
-            },
-            {
-                id: "magic5",
-                reason: "10. Reduces Magic combat delay further, maximizing DPS and capping off a strong Magic-focused progression path."
-            }
-        ]
-    };
+            // Recommendations for Matt
+            const mattRecommendations = {
+                relics: [{
+                        id: "relic1a",
+                        reason: "Power Miner: The Echo Pickaxe allows you to bank ores automatically and mine more efficiently. This is perfect for early skilling progression with rune essence (Morytania for Barrows teleport tablets) or gathering higher-tier ores for crafting and smithing in Fremennik."
+                    },
+                    {
+                        id: "relic2a",
+                        reason: "Friendly Forager: Enables passive herb gathering from activities like Woodcutting and Fishing. This complements Morytania (Barrows supply runs and Slayer potions) and Fremennik (herb-heavy Slayer tasks). The 90% secondary preservation ensures cost-efficient potion crafting."
+                    },
+                    {
+                        id: "relic3c",
+                        reason: "Clue Compass: Accelerates clue-solving by teleporting to STASH units and steps. This is valuable for Barrows runs in Morytania, where monsters frequently drop clue scrolls, or for Fremennik Slayer tasks with clue rewards."
+                    },
+                    {
+                        id: "relic4a",
+                        reason: "Golden God: Provides unlimited High Alchemy and Prayer XP from coins. Use this during Barrows to alch items like bolt racks, weapons, and gear, turning trash loot into GP while restoring Prayer at altars for extended combat sessions."
+                    },
+                    {
+                        id: "relic5b",
+                        reason: "Production Master: Automates potion-making, arrow-fletching, and gear crafting. This is a time-saver for Morytania and Fremennik prep activities, where Slayer tasks and boss fights demand large amounts of supplies."
+                    },
+                    {
+                        id: "relic6b",
+                        reason: "Banker's Note: Avoids unnecessary banking trips, crucial during Slayer tasks in Morytania or Fremennik and extended boss fights like Dagannoth Kings. It also ensures uninterrupted resource gathering in Fremennik caves."
+                    },
+                    {
+                        id: "relic7b",
+                        reason: "Grimoire: Unlocks all prayers and spellbooks, granting flexibility for Blood Spells at Barrows or Augury/Rigour for efficient Slayer tasks and bosses like Zulrah in Kandarin."
+                    },
+                    {
+                        id: "relic8b",
+                        reason: "Guardian: Summons a companion for PvM encounters, highly effective for multi-boss fights like Dagannoth Kings or Slayer tasks requiring AoE combat. The Guardian’s consistent damage output boosts efficiency in Fremennik caves."
+                    }
+                ],
+                regions: [{
+                        id: "kandarin",
+                        reason: "First: Access Zulrah for steady profits, Thermonuclear Smoke Devil for Slayer upgrades, and Seers' Village herb patches for Friendly Forager. The region also offers accessible clue scroll rewards via PvM like Zulrah or Slayer."
+                    },
+                    {
+                        id: "morytania",
+                        reason: "Second: Unlock Barrows for gear upgrades and Slayer monsters like Abyssal Demons for whips. The region's herb patches and Slayer-friendly environment (Gargoyles, Nechryaels) synergize well with Friendly Forager and potion crafting."
+                    },
+                    {
+                        id: "fremennik",
+                        reason: "Third: Provides Dagannoth Kings for best-in-slot rings like Berserker or Seer's Ring. This region also supports Melee and Ranged training via rock crabs and offers high-value resources for crafting."
+                    }
+                ],
+                combatMasteries: [{
+                        id: "magic1",
+                        reason: "1. Unlock first for boosted Magic damage rolls, which are highly effective at Barrows in Morytania. This early boost aligns with the high availability of Magic training resources in Kandarin and Morytania."
+                    },
+                    {
+                        id: "magic2",
+                        reason: "2. Increases Magic max hits by leveraging longer attack delays, great for sustained boss fights in Kandarin and Fremennik, including Dagannoth Kings."
+                    },
+                    {
+                        id: "magic3",
+                        reason: "3. Reduces Magic attack intervals, enabling faster DPS. This becomes crucial for fast-paced fights at Zulrah or Slayer tasks in Fremennik."
+                    },
+                    {
+                        id: "ranged1",
+                        reason: "4. Provides consistent Ranged damage output, perfect for early Barrows fights and Slayer tasks where Magic isn't as effective."
+                    },
+                    {
+                        id: "ranged2",
+                        reason: "5. Boosts Ranged max hits during consecutive attacks, complementing Kandarin's strong Ranged training areas."
+                    },
+                    {
+                        id: "ranged3",
+                        reason: "6. Reduces Ranged attack intervals for consistent DPS at high-end bosses like Zulrah or King Black Dragon."
+                    },
+                    {
+                        id: "melee1",
+                        reason: "7. Improves Melee consistency, useful for Slayer tasks and bosses in Fremennik and Kandarin."
+                    },
+                    {
+                        id: "melee2",
+                        reason: "8. Adds echo hits for extra damage output, which works well against tanky bosses like Dagannoth Kings."
+                    },
+                    {
+                        id: "magic4",
+                        reason: "9. Passive healing during Magic attacks ensures sustained combat efficiency at long fights like Barrows or Slayer."
+                    },
+                    {
+                        id: "magic5",
+                        reason: "10. Reduces Magic combat delay further, maximizing DPS and capping off a strong Magic-focused progression path."
+                    }
+                ]
+            };
 
-        // Recommendations for The Filthy Casual
-    const casualRecommendations = {
-        relics: [
-            {
-                id: "relic1b",
-                reason: "Lumberjack: Perfect for gathering resources effortlessly. Enjoy automating Firemaking and Fletching tasks while exploring the peaceful side of the game."
-            },
-            {
-                id: "relic2c",
-                reason: "Dodgy Deals: Maximize fun with mass pickpocketing and easy money-making. Great for casually engaging with townsfolk and discovering hidden treasures."
-            },
-            {
-                id: "relic3a",
-                reason: "Fairy's Flight: Unlocks travel to fairy rings and spirit trees, making exploration and skilling much more accessible and enjoyable."
-            },
-            {
-                id: "relic4c",
-                reason: "Equilibrium: Grants balanced XP gains, perfect for casual players who want to skill and progress in a variety of areas without heavy focus on combat."
-            },
-            {
-                id: "relic5a",
-                reason: "Treasure Arbiter: Perfect for clue scroll enthusiasts, maximizing treasure hunt rewards for hours of casual exploration and fun."
-            },
-            {
-                id: "relic6a",
-                reason: "Total Recall: Return to favorite skilling or exploration spots with ease, saving time while casually exploring different regions."
-            },
-            {
-                id: "relic7a",
-                reason: "Pocket Kingdom: Allows managing Miscellania anywhere, generating resources passively while focusing on lighthearted gameplay."
-            },
-            {
-                id: "relic8c",
-                reason: "Specialist: Adds an extra layer of fun to combat with enhanced special attacks, making casual bossing and PvM enjoyable without intensity."
-            }
-        ],
-        regions: [
-            {
-                id: "kandarin",
-                reason: "First: Access fun activities like the Fishing Guild, Seers' Village for rooftop agility, and clue scroll rewards. It's a well-rounded region for casual exploration."
-            },
-            {
-                id: "fremennik",
-                reason: "Second: Offers rock crabs for laid-back training, access to Fremennik helms, and enjoyable Slayer tasks. A good mix of skilling and light combat."
-            },
-            {
-                id: "kourend",
-                reason: "Third: Great for group skilling activities like aerial fishing and Farming Guild tasks. A versatile region for casual, cooperative gameplay."
-            }
-        ],
-    combatMasteries: [
-        {
-            id: "magic1",
-            reason: "1. Start with enhanced Magic damage, boosting casual combat effectiveness for exploring regions or tackling small bosses with minimal stress."
-        },
-        {
-            id: "magic2",
-            reason: "2. Boost Magic max hits, adding an exciting edge to casual bossing or PvM encounters without making them too demanding."
-        },
-        {
-            id: "magic3",
-            reason: "3. Faster Magic attack intervals make spellcasting smoother and more engaging during casual Slayer tasks or skilling-enhanced combat."
-        },
-        {
-            id: "ranged1",
-            reason: "4. Consistent Ranged damage ensures smooth combat for occasional bossing and light Slayer tasks, fitting a relaxed playstyle."
-        },
-        {
-            id: "ranged2",
-            reason: "5. Increases Ranged max hits over sustained attacks, rewarding casual players who want to experiment with longer fights or high-DPS ranged setups."
-        },
-        {
-            id: "ranged3",
-            reason: "6. Faster Ranged attack intervals improve DPS efficiency while maintaining the laid-back flow of the game."
-        },
-        {
-            id: "melee1",
-            reason: "7. Reliable Melee damage consistency, perfect for lighthearted combat and training while exploring fun Slayer tasks."
-        },
-        {
-            id: "melee2",
-            reason: "8. Adds echo hits for extra Melee damage, ideal for casual multitarget combat scenarios in Slayer tasks or group bossing."
-        },
-        {
-            id: "magic4",
-            reason: "9. Healing on high Magic rolls makes casual PvM more sustainable and forgiving, reducing the need for constant supplies."
-        },
-        {
-            id: "magic5",
-            reason: "10. Faster Magic attack intervals maximize DPS in a fun and relaxed way, capping off an enjoyable and low-stress progression path."
-        }
-    ]
-    };
-    
-    // Recommendations for Kevin
-    const kevinRecommendations = {
-        relics: [
-            {
-                id: "relic1a",
-                reason: "Power Miner: Early game Melee-focused players benefit from mining rune essence and ores for crafting and smithing gear upgrades. Morytania’s resources align with Theatre of Blood prep."
-            },
-            {
-                id: "relic2a",
-                reason: "Friendly Forager: Ensures a steady supply of herbs for crafting Saradomin Brews and Super Restores. Morytania’s herb patches and Fremennik’s Slayer tasks benefit heavily from this passive supply."
-            },
-            {
-                id: "relic3c",
-                reason: "Clue Compass: Solves clues efficiently for high-tier loot rewards like Third Age armor. Slayer monsters in Fremennik and Morytania often drop clues, making this relic highly valuable for PvM progression."
-            },
-            {
-                id: "relic4a",
-                reason: "Golden God: Provides free High Alchemy during Theatre of Blood Slayer tasks and Fremennik boss fights, turning trash loot into GP while maintaining Prayer levels."
-            },
-            {
-                id: "relic5b",
-                reason: "Production Master: Accelerates crafting for potions and supplies, ensuring consistent preparation for Theatre of Blood or Gauntlet runs in Tirannwn. This is essential for Fremennik crafting activities as well."
-            },
-            {
-                id: "relic6b",
-                reason: "Banker's Note: Reduces downtime between PvM sessions. Noting items directly during long Slayer tasks in Fremennik ensures uninterrupted progress, especially for Dagannoth Kings or Abyssal Demons."
-            },
-            {
-                id: "relic7b",
-                reason: "Grimoire: Provides access to critical prayers like Piety or Augury for Slayer tasks and bosses. This complements Tirannwn's hybrid combat zones (Gauntlet) and Fremennik's multi-boss content."
-            },
-            {
-                id: "relic8a",
-                reason: "Last Stand: Adds survivability for late-game PvM like Inferno or Theatre of Blood. The healing and stat boosts are critical for sustained combat against tough bosses."
-            }
-        ],
-        regions: [
-            {
-                id: "morytania",
-                reason: "First: Unlocks Theatre of Blood and Barrows for consistent gear upgrades. Slayer monsters like Nechryaels and Abyssal Demons synergize with herb gathering and potion crafting."
-            },
-            {
-                id: "tirannwn",
-                reason: "Second: Provides the Gauntlet and Crystal Weaponry, critical for hybrid builds. The region also offers Seren Stones for Magic training and upgrades for multi-combat zones."
-            },
-            {
-                id: "fremennik",
-                reason: "Third: Dagannoth Kings provide best-in-slot rings for Melee and Ranged builds. Fremennik also complements Melee progression with high-level Slayer tasks and crafting opportunities."
-            }
-        ],
-        combatMasteries: [
-            { id: "melee1", reason: "1. Unlock first to ensure consistent Melee DPS, crucial for Morytania Slayer tasks and Theatre of Blood." },
-            { id: "melee2", reason: "2. Adds echo hits for additional DPS, which are especially useful in Tirannwn Gauntlet runs." },
-            { id: "melee3", reason: "3. Reduces Melee attack intervals, enhancing overall efficiency for Fremennik bosses." },
-            { id: "magic1", reason: "4. Boosts Magic damage on high rolls, providing flexibility for hybrid combat at Gauntlet or Theatre of Blood." },
-            { id: "magic2", reason: "5. Enhances Magic max hits for hybrid scenarios, particularly effective in Tirannwn." },
-            { id: "ranged1", reason: "6. Provides consistent Ranged DPS for Fremennik bosses like Dagannoth Kings." },
-            { id: "ranged2", reason: "7. Boosts Ranged max hits during sustained fights, complementing Fremennik combat challenges." },
-            { id: "melee4", reason: "8. Passive healing during prolonged Melee combat, ensuring survivability in Theatre of Blood." },
-            { id: "melee5", reason: "9. Speeds up Melee attacks, boosting DPS efficiency for high-end encounters." },
-            { id: "melee6", reason: "10. Unlock final tier for massive chainable DPS, ideal for Inferno or Theatre of Blood bosses." }
-        ]
-    };
+            // Recommendations for The Filthy Casual
+            const casualRecommendations = {
+                relics: [{
+                        id: "relic1b",
+                        reason: "Lumberjack: Perfect for gathering resources effortlessly. Enjoy automating Firemaking and Fletching tasks while exploring the peaceful side of the game."
+                    },
+                    {
+                        id: "relic2c",
+                        reason: "Dodgy Deals: Maximize fun with mass pickpocketing and easy money-making. Great for casually engaging with townsfolk and discovering hidden treasures."
+                    },
+                    {
+                        id: "relic3a",
+                        reason: "Fairy's Flight: Unlocks travel to fairy rings and spirit trees, making exploration and skilling much more accessible and enjoyable."
+                    },
+                    {
+                        id: "relic4c",
+                        reason: "Equilibrium: Grants balanced XP gains, perfect for casual players who want to skill and progress in a variety of areas without heavy focus on combat."
+                    },
+                    {
+                        id: "relic5a",
+                        reason: "Treasure Arbiter: Perfect for clue scroll enthusiasts, maximizing treasure hunt rewards for hours of casual exploration and fun."
+                    },
+                    {
+                        id: "relic6a",
+                        reason: "Total Recall: Return to favorite skilling or exploration spots with ease, saving time while casually exploring different regions."
+                    },
+                    {
+                        id: "relic7a",
+                        reason: "Pocket Kingdom: Allows managing Miscellania anywhere, generating resources passively while focusing on lighthearted gameplay."
+                    },
+                    {
+                        id: "relic8c",
+                        reason: "Specialist: Adds an extra layer of fun to combat with enhanced special attacks, making casual bossing and PvM enjoyable without intensity."
+                    }
+                ],
+                regions: [{
+                        id: "kandarin",
+                        reason: "First: Access fun activities like the Fishing Guild, Seers' Village for rooftop agility, and clue scroll rewards. It's a well-rounded region for casual exploration."
+                    },
+                    {
+                        id: "fremennik",
+                        reason: "Second: Offers rock crabs for laid-back training, access to Fremennik helms, and enjoyable Slayer tasks. A good mix of skilling and light combat."
+                    },
+                    {
+                        id: "kourend",
+                        reason: "Third: Great for group skilling activities like aerial fishing and Farming Guild tasks. A versatile region for casual, cooperative gameplay."
+                    }
+                ],
+                combatMasteries: [{
+                        id: "magic1",
+                        reason: "1. Start with enhanced Magic damage, boosting casual combat effectiveness for exploring regions or tackling small bosses with minimal stress."
+                    },
+                    {
+                        id: "magic2",
+                        reason: "2. Boost Magic max hits, adding an exciting edge to casual bossing or PvM encounters without making them too demanding."
+                    },
+                    {
+                        id: "magic3",
+                        reason: "3. Faster Magic attack intervals make spellcasting smoother and more engaging during casual Slayer tasks or skilling-enhanced combat."
+                    },
+                    {
+                        id: "ranged1",
+                        reason: "4. Consistent Ranged damage ensures smooth combat for occasional bossing and light Slayer tasks, fitting a relaxed playstyle."
+                    },
+                    {
+                        id: "ranged2",
+                        reason: "5. Increases Ranged max hits over sustained attacks, rewarding casual players who want to experiment with longer fights or high-DPS ranged setups."
+                    },
+                    {
+                        id: "ranged3",
+                        reason: "6. Faster Ranged attack intervals improve DPS efficiency while maintaining the laid-back flow of the game."
+                    },
+                    {
+                        id: "melee1",
+                        reason: "7. Reliable Melee damage consistency, perfect for lighthearted combat and training while exploring fun Slayer tasks."
+                    },
+                    {
+                        id: "melee2",
+                        reason: "8. Adds echo hits for extra Melee damage, ideal for casual multitarget combat scenarios in Slayer tasks or group bossing."
+                    },
+                    {
+                        id: "magic4",
+                        reason: "9. Healing on high Magic rolls makes casual PvM more sustainable and forgiving, reducing the need for constant supplies."
+                    },
+                    {
+                        id: "magic5",
+                        reason: "10. Faster Magic attack intervals maximize DPS in a fun and relaxed way, capping off an enjoyable and low-stress progression path."
+                    }
+                ]
+            };
 
-    // Highlighting functions
-    function highlightRecommendations(recommendations) {
-        clearHighlights();
-        recommendations.relics.forEach(({ id, reason }) => highlightElement(id, reason));
-        recommendations.regions.forEach(({ id, reason }) => highlightElement(id, reason));
-        recommendations.combatMasteries.forEach(({ id, reason }) => highlightElement(id, reason));
-    }
+            // Recommendations for Kevin
+            const kevinRecommendations = {
+                relics: [{
+                        id: "relic1a",
+                        reason: "Power Miner: Early game Melee-focused players benefit from mining rune essence and ores for crafting and smithing gear upgrades. Morytania’s resources align with Theatre of Blood prep."
+                    },
+                    {
+                        id: "relic2a",
+                        reason: "Friendly Forager: Ensures a steady supply of herbs for crafting Saradomin Brews and Super Restores. Morytania’s herb patches and Fremennik’s Slayer tasks benefit heavily from this passive supply."
+                    },
+                    {
+                        id: "relic3c",
+                        reason: "Clue Compass: Solves clues efficiently for high-tier loot rewards like Third Age armor. Slayer monsters in Fremennik and Morytania often drop clues, making this relic highly valuable for PvM progression."
+                    },
+                    {
+                        id: "relic4a",
+                        reason: "Golden God: Provides free High Alchemy during Theatre of Blood Slayer tasks and Fremennik boss fights, turning trash loot into GP while maintaining Prayer levels."
+                    },
+                    {
+                        id: "relic5b",
+                        reason: "Production Master: Accelerates crafting for potions and supplies, ensuring consistent preparation for Theatre of Blood or Gauntlet runs in Tirannwn. This is essential for Fremennik crafting activities as well."
+                    },
+                    {
+                        id: "relic6b",
+                        reason: "Banker's Note: Reduces downtime between PvM sessions. Noting items directly during long Slayer tasks in Fremennik ensures uninterrupted progress, especially for Dagannoth Kings or Abyssal Demons."
+                    },
+                    {
+                        id: "relic7b",
+                        reason: "Grimoire: Provides access to critical prayers like Piety or Augury for Slayer tasks and bosses. This complements Tirannwn's hybrid combat zones (Gauntlet) and Fremennik's multi-boss content."
+                    },
+                    {
+                        id: "relic8a",
+                        reason: "Last Stand: Adds survivability for late-game PvM like Inferno or Theatre of Blood. The healing and stat boosts are critical for sustained combat against tough bosses."
+                    }
+                ],
+                regions: [{
+                        id: "morytania",
+                        reason: "First: Unlocks Theatre of Blood and Barrows for consistent gear upgrades. Slayer monsters like Nechryaels and Abyssal Demons synergize with herb gathering and potion crafting."
+                    },
+                    {
+                        id: "tirannwn",
+                        reason: "Second: Provides the Gauntlet and Crystal Weaponry, critical for hybrid builds. The region also offers Seren Stones for Magic training and upgrades for multi-combat zones."
+                    },
+                    {
+                        id: "fremennik",
+                        reason: "Third: Dagannoth Kings provide best-in-slot rings for Melee and Ranged builds. Fremennik also complements Melee progression with high-level Slayer tasks and crafting opportunities."
+                    }
+                ],
+                combatMasteries: [{
+                        id: "melee1",
+                        reason: "1. Unlock first to ensure consistent Melee DPS, crucial for Morytania Slayer tasks and Theatre of Blood."
+                    },
+                    {
+                        id: "melee2",
+                        reason: "2. Adds echo hits for additional DPS, which are especially useful in Tirannwn Gauntlet runs."
+                    },
+                    {
+                        id: "melee3",
+                        reason: "3. Reduces Melee attack intervals, enhancing overall efficiency for Fremennik bosses."
+                    },
+                    {
+                        id: "magic1",
+                        reason: "4. Boosts Magic damage on high rolls, providing flexibility for hybrid combat at Gauntlet or Theatre of Blood."
+                    },
+                    {
+                        id: "magic2",
+                        reason: "5. Enhances Magic max hits for hybrid scenarios, particularly effective in Tirannwn."
+                    },
+                    {
+                        id: "ranged1",
+                        reason: "6. Provides consistent Ranged DPS for Fremennik bosses like Dagannoth Kings."
+                    },
+                    {
+                        id: "ranged2",
+                        reason: "7. Boosts Ranged max hits during sustained fights, complementing Fremennik combat challenges."
+                    },
+                    {
+                        id: "melee4",
+                        reason: "8. Passive healing during prolonged Melee combat, ensuring survivability in Theatre of Blood."
+                    },
+                    {
+                        id: "melee5",
+                        reason: "9. Speeds up Melee attacks, boosting DPS efficiency for high-end encounters."
+                    },
+                    {
+                        id: "melee6",
+                        reason: "10. Unlock final tier for massive chainable DPS, ideal for Inferno or Theatre of Blood bosses."
+                    }
+                ]
+            };
 
-    function highlightElement(id, reason) {
-        const element = document.getElementById(id)?.parentElement;
-        if (element) {
-            element.style.boxShadow = "0 0 15px 5px #f0c75e";
-            element.style.borderRadius = "8px";
-            if (!element.querySelector(".recommendation-reason")) {
-                const reasonDiv = document.createElement("div");
-                reasonDiv.textContent = reason;
-                reasonDiv.style.fontSize = "12px";
-                reasonDiv.style.marginTop = "5px";
-                reasonDiv.style.color = "#f0c75e";
-                reasonDiv.classList.add("recommendation-reason");
-                element.appendChild(reasonDiv);
-            }
-        }
-    }
+            //Recommendations for Matt but Range
+            const rangedMattRecommendations = {
+                relics: [{
+                        id: "relic1a",
+                        reason: "Power Miner: Grants the Echo Pickaxe, enabling automated banking of ores and efficient rune essence mining in Morytania. This complements early skilling to craft and alch Ranged gear."
+                    },
+                    {
+                        id: "relic2a",
+                        reason: "Friendly Forager: Passive herb gathering and potion crafting synergize with Ranged combat preparation. Use Morytania's herb patches for energy and ranged potions to power through Slayer tasks."
+                    },
+                    {
+                        id: "relic3c",
+                        reason: "Clue Compass: Accelerates clue-solving by teleporting to STASH units and steps. This is valuable for Barrows runs in Morytania, where monsters frequently drop clue scrolls, or for Fremennik Slayer tasks with clue rewards."
+                    },
+                    {
+                        id: "relic4a",
+                        reason: "Golden God: Provides free High Alchemy for loot from Ranged combat (e.g., bolt racks from Barrows) and boosts Prayer XP, keeping you sustained during prolonged Ranged-focused bossing."
+                    },
+                    {
+                        id: "relic5b",
+                        reason: "Production Master: Mass-production of arrows, bolts, and potions simplifies Ranged preparation for Fremennik bosses like Dagannoth Kings or Kandarin’s Zulrah."
+                    },
+                    {
+                        id: "relic6b",
+                        reason: "Banker's Note: Avoids frequent banking trips, crucial during Ranged Slayer tasks or extended bossing sessions like Karil's at Barrows or Zulrah in Kandarin."
+                    },
+                    {
+                        id: "relic7b",
+                        reason: "Grimoire: Unlocks all spellbooks and prayers, giving access to Rigour for enhanced Ranged damage and defensive abilities. Essential for hybrid setups at bosses like Zulrah."
+                    },
+                    {
+                        id: "relic8b",
+                        reason: "Guardian: Summons a companion for additional DPS and support during Ranged-focused boss fights like Dagannoth Kings or Echo Bosses."
+                    }
+                ],
+                regions: [{
+                        id: "kandarin",
+                        reason: "First: Access Zulrah for high-value loot, clue scroll progression, and crafting resources for Ranged gear. Kandarin also offers Thermonuclear Smoke Devil, an excellent target for Ranged combat."
+                    },
+                    {
+                        id: "morytania",
+                        reason: "Second: Unlock Barrows for Karil’s Ranged gear, crucial for progressing through Slayer tasks and early boss fights. The region also provides Slayer monsters like Nechryaels and Gargoyles that align well with a Ranged build."
+                    },
+                    {
+                        id: "fremennik",
+                        reason: "Third: Dagannoth Kings drop best-in-slot rings, including the Archers’ Ring, to maximize Ranged performance. Fremennik also supports Melee training for hybrid versatility."
+                    }
+                ],
+                combatMasteries: [{
+                        id: "ranged1",
+                        reason: "1. Consistent Ranged damage ensures smooth progression through Slayer tasks and early Barrows encounters with Karil’s Ranged gear."
+                    },
+                    {
+                        id: "ranged2",
+                        reason: "2. Boosts max hits with Ranged over sustained attacks, ideal for prolonged boss fights like Zulrah and Slayer tasks with high HP targets."
+                    },
+                    {
+                        id: "ranged3",
+                        reason: "3. Faster attack intervals make Ranged combat more efficient, especially against faster bosses like Thermonuclear Smoke Devil or Dagannoth Kings."
+                    },
+                    {
+                        id: "ranged4",
+                        reason: "4. Passive healing with every fifth Ranged hit ensures sustainability during prolonged boss fights, reducing reliance on supplies."
+                    },
+                    {
+                        id: "ranged5",
+                        reason: "5. Maximizes Ranged DPS with faster attacks, especially useful for consistent high-damage output at Zulrah or in multi-target fights like Dagannoth Kings."
+                    },
+                    {
+                        id: "magic1",
+                        reason: "6. Enhanced Magic damage for hybrid encounters ensures versatility when using Blood Spells for healing in sustained fights."
+                    },
+                    {
+                        id: "magic2",
+                        reason: "7. Boosted Magic max hits provide a fallback during hybrid scenarios, complementing Rigour with hybrid combat setups."
+                    },
+                    {
+                        id: "magic3",
+                        reason: "8. Faster Magic attack intervals enhance hybrid play for bosses where Ranged may not be optimal, like Barrows or Slayer tasks with high Magic defense."
+                    },
+                    {
+                        id: "melee1",
+                        reason: "9. Reliable Melee damage consistency allows for versatility when engaging in hybrid combat tasks or Dagannoth Kings for close-range kills."
+                    },
+                    {
+                        id: "melee2",
+                        reason: "10. Adds echo hits for extra Melee damage, providing a backup DPS option for Ranged-focused builds during hybrid encounters."
+                    }
+                ]
+            };
 
-    function clearHighlights() {
-        document.querySelectorAll(".recommendation-reason").forEach(reason => reason.remove());
-        document.querySelectorAll(".checkbox").forEach(checkbox => {
-            const parent = checkbox.parentElement;
-            if (parent) {
-                parent.style.boxShadow = "none";
-                parent.style.borderRadius = "none";
+
+            // Highlighting functions
+            function highlightRecommendations(recommendations) {
+                clearHighlights();
+                recommendations.relics.forEach(({
+                    id,
+                    reason
+                }) => highlightElement(id, reason));
+                recommendations.regions.forEach(({
+                    id,
+                    reason
+                }) => highlightElement(id, reason));
+                recommendations.combatMasteries.forEach(({
+                    id,
+                    reason
+                }) => highlightElement(id, reason));
             }
+
+            function highlightElement(id, reason) {
+                const element = document.getElementById(id)?.parentElement;
+                if (element) {
+                    element.style.boxShadow = "0 0 15px 5px #f0c75e";
+                    element.style.borderRadius = "8px";
+                    if (!element.querySelector(".recommendation-reason")) {
+                        const reasonDiv = document.createElement("div");
+                        reasonDiv.textContent = reason;
+                        reasonDiv.style.fontSize = "12px";
+                        reasonDiv.style.marginTop = "5px";
+                        reasonDiv.style.color = "#f0c75e";
+                        reasonDiv.classList.add("recommendation-reason");
+                        element.appendChild(reasonDiv);
+                    }
+                }
+            }
+
+            function clearHighlights() {
+                document.querySelectorAll(".recommendation-reason").forEach(reason => reason.remove());
+                document.querySelectorAll(".checkbox").forEach(checkbox => {
+                    const parent = checkbox.parentElement;
+                    if (parent) {
+                        parent.style.boxShadow = "none";
+                        parent.style.borderRadius = "none";
+                    }
+                });
+            }
+
+            function resetChoices() {
+                // Uncheck all checkboxes
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
+
+                // Remove all highlights and reasons
+                clearHighlights();
+
+                // Clear all localStorage data related to choices
+                localStorage.clear();
+            }
+
+
+            // Attach events
+            document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
+            document.getElementById("mattRangedButton").addEventListener("click", () => highlightRecommendations(rangedMattRecommendations));
+            document.getElementById("kevinButton").addEventListener("click", () => highlightRecommendations(kevinRecommendations));
+            document.getElementById("casualButton").addEventListener("click", () => highlightRecommendations(casualRecommendations));
+            document.getElementById("resetButton").addEventListener("click", resetChoices);
         });
-    }
-
-function resetChoices() {
-    // Uncheck all checkboxes
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
-
-    // Remove all highlights and reasons
-    clearHighlights();
-
-    // Clear all localStorage data related to choices
-    localStorage.clear();
-}
-
-
-    // Attach events
-    document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
-    document.getElementById("kevinButton").addEventListener("click", () => highlightRecommendations(kevinRecommendations));
-    document.getElementById("casualButton").addEventListener("click", () => highlightRecommendations(casualRecommendations));
-    document.getElementById("resetButton").addEventListener("click", resetChoices);
-});
-</script>
-
-
+    </script>
 
 
 
@@ -1652,4 +1789,5 @@ function resetChoices() {
 
 
 </body>
+
 </html>
