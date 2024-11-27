@@ -1525,9 +1525,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function resetChoices() {
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
-    }
+function resetChoices() {
+    // Uncheck all checkboxes
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
+
+    // Remove all highlights and reasons
+    clearHighlights();
+
+    // Clear all localStorage data related to choices
+    localStorage.clear();
+}
+
 
     // Attach events
     document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
