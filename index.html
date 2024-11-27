@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leagues V: Raging Echoes Plan</title>
+    <style>
+        /* Styling based on OSRS dark theme */
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0d1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            color: #f0c75e;
+        }
+        .tabs {
+            position: sticky;
+            top: 0;
+            background-color: #262626;
+            z-index: 1000;
+            display: flex;
+            border-bottom: 2px solid #444444;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px 20px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #333333;
+            color: #e0e0d1;
+            font-weight: bold;
+            border-right: 1px solid #444444;
+        }
+        .tab.active {
+            background-color: #444444;
+            color: #f0c75e;
+        }
+        .tab:last-child {
+            border-right: none;
+        }
+        .section {
+            padding: 20px;
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        /* Collapsible content styling */
+        .collapsible {
+            background-color: #333333;
+            color: #e0e0d1;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .active, .collapsible:hover {
+            background-color: #444444;
+        }
+        .content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #262626;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        label {
+            cursor: pointer;
+        }
+        .checkbox {
+            position: relative;
+            top: 3px;
+            margin-right: 10px;
+        }
+        /* Player Profiles Section Styling */
+.player-profiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 20px;
+    background-color: #262626;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    gap: 20px;
+    color: #e0e0d1;
+}
+
+.player-profile {
+    flex: 1;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px #333333;
+}
+
+.player-profile h3 {
+    color: #f0c75e;
+    margin-bottom: 10px;
+}
+
+.player-profile p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .player-profiles {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Leagues V: Raging Echoes Plan</h1>
+        <div class="player-profiles">
+        <div class="player-profile" id="matt-profile">
+            <h3>Matt's Play Style</h3>
+            <p><strong>Primary Focus:</strong> Enjoyment and avoiding grindier aspects.</p>
+            <p><strong>Goals:</strong> Focus on Magic with versatility, easy bosses, and minimal Raids.</p>
+            <p><strong>Preferences:</strong> Efficient skilling, balanced combat, and smooth progression.</p>
+        </div>
+        <div class="player-profile" id="kevin-profile">
+            <h3>Kevin's Play Style</h3>
+            <p><strong>Primary Focus:</strong> Melee-centric PvM with some Raids and the Inferno.</p>
+            <p><strong>Goals:</strong> Reach Tier 6 combat mastery and Tier 8 relics as quickly as possible.</p>
+            <p><strong>Preferences:</strong> Unlocking powerful equipment, efficient potion use, and Echo Boss drops.</p>
+        </div>
+    </div>
+    <div class="tabs">
+        <div class="tab active" data-section="relics">Relic Choices</div>
+        <div class="tab" data-section="combat-masteries">Combat Masteries</div>
+        <div class="tab" data-section="regions">Regions</div>
+    </div>
+    <div class="section active" id="relics">
+        <h2>Relic Choices</h2>
+
+        <!-- Tier 1 -->
+        <div class="relic">
+            <h3>Tier 1 (0 Points)</h3>
+            <ul>
+                <!-- Power Miner -->
+                <li>
+                    <input type="checkbox" id="relic1a" class="checkbox">
+                    <label for="relic1a"><strong>Power Miner</strong> &ndash; Grants the Echo pickaxe with powerful mining benefits.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Significantly speeds up Mining by instantly mining ores or not depleting rocks.</li>
+                            <li>Items gathered are automatically sent to your bank.</li>
+                            <li>Optional auto-smelting and gem cutting, regardless of levels.</li>
+                            <li>Reduces grind in Mining and Smithing.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Mining can still be click-intensive despite the benefits.</li>
+                            <li>May not directly enhance combat experience.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Lumberjack -->
+                <li>
+                    <input type="checkbox" id="relic1b" class="checkbox">
+                    <label for="relic1b"><strong>Lumberjack</strong> &ndash; Grants the Echo axe with powerful woodcutting benefits.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Accelerates Woodcutting by instantly chopping logs or instant tree respawns.</li>
+                            <li>Items gathered are automatically sent to your bank.</li>
+                            <li>Optional auto-burning logs for Firemaking XP or auto-fletching into arrow shafts.</li>
+                            <li>Reduces grind in Woodcutting, Firemaking, and Fletching.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>May not contribute directly to your combat preferences.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Animal Wrangler -->
+                <li>
+                    <input type="checkbox" id="relic1c" class="checkbox">
+                    <label for="relic1c"><strong>Animal Wrangler</strong> &ndash; Grants the Echo harpoon with fishing and hunter benefits.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Provides a steady supply of food with a 50% chance to automatically cook caught fish.</li>
+                            <li>Acts as all fishing equipment.</li>
+                            <li>Hunter traps never fail; chinchompas caught faster and doubled.</li>
+                            <li>Never burn food while cooking.</li>
+                            <li>Reduces grind in Fishing and Hunter.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>May be less impactful if you prefer buying food or are not interested in these skills.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="relic">
+            <h3>Tier 2 (750 Points)</h3>
+            <ul>
+                <!-- Friendly Forager -->
+                <li>
+                    <input type="checkbox" id="relic2a" class="checkbox">
+                    <label for="relic2a"><strong>Friendly Forager</strong> &ndash; Receive the Forager's Pouch with herblore benefits.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Passively gathers grimy herbs while skilling.</li>
+                            <li>Secondary ingredients have a 90% chance not to be consumed.</li>
+                            <li>Potions have 4 doses instead of 3.</li>
+                            <li>Reduces grind in Herblore.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Supports all combat styles through potion availability.</li>
+                            <li>If you prefer buying potions, benefits may be less significant.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Corner Cutter -->
+                <li>
+                    <input type="checkbox" id="relic2b" class="checkbox">
+                    <label for="relic2b"><strong>Corner Cutter</strong> &ndash; Receive Sage's Greaves with agility benefits.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Gain Agility XP while running.</li>
+                            <li>Always succeed in Agility actions.</li>
+                            <li>Bonus completion counts and XP on Agility courses.</li>
+                            <li>Marks of Grace spawn with 10,000 coins.</li>
+                            <li>Improves efficiency in all activities.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>If Agility isn't appealing, benefits may be less impactful.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Dodgy Deals -->
+                <li>
+                    <input type="checkbox" id="relic2c" class="checkbox">
+                    <label for="relic2c"><strong>Dodgy Deals</strong> &ndash; Enhances thieving activities significantly.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Mass pickpocketing in a large area.</li>
+                            <li>100% success rate in Thieving.</li>
+                            <li>Items obtained are noted.</li>
+                            <li>Stalls never deplete.</li>
+                            <li>Makes money quickly through Thieving.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Thieving can become repetitive.</li>
+                            <li>If Thieving isn't appealing, benefits may be less useful.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="relic">
+            <h3>Tier 3 (Points Unknown)</h3>
+            <ul>
+                <!-- Fairy's Flight -->
+                <li>
+                    <input type="checkbox" id="relic3a" class="checkbox">
+                    <label for="relic3a"><strong>Fairy's Flight</strong> &ndash; Receive a Fairy Mushroom for enhanced mobility.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Teleport to any fairy ring, spirit tree, or tool leprechaun.</li>
+                            <li>Unlocks Tree Gnome Village quest.</li>
+                            <li>Quick access to various locations.</li>
+                            <li>Aids in both skilling and combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Requires familiarity with fairy ring codes.</li>
+                            <li>Limited to unlocked regions.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Bank Heist -->
+                <li>
+                    <input type="checkbox" id="relic3b" class="checkbox">
+                    <label for="relic3b"><strong>Bank Heist</strong> &ndash; Receive a Banker's Briefcase for banking convenience.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Teleport to any bank, bank chest, or deposit box.</li>
+                            <li>Reduces time spent banking.</li>
+                            <li>Improves efficiency in skilling and combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Less variety in teleport destinations.</li>
+                            <li>If you prefer exploration, may be less exciting.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Clue Compass -->
+                <li>
+                    <input type="checkbox" id="relic3c" class="checkbox">
+                    <label for="relic3c"><strong>Clue Compass</strong> &ndash; Receive a Clue Compass for treasure trail enthusiasts.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Teleport to any STASH unit, Falo the Bard, or current clue step.</li>
+                            <li>Ideal for completing clue scrolls efficiently.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Limited utility if clue scrolls aren't a primary interest.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 4 -->
+        <div class="relic">
+            <h3>Tier 4 (Points Unknown)</h3>
+            <ul>
+                <!-- Golden God -->
+                <li>
+                    <input type="checkbox" id="relic4a" class="checkbox">
+                    <label for="relic4a"><strong>Golden God</strong> &ndash; Enhance alchemy spells and prayer training.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>High and Low Alchemy spells have no rune cost or level requirements.</li>
+                            <li>Items give 15% more gold and have a 65% chance not to be consumed when alched.</li>
+                            <li>Auto-cast alch on item stacks without interrupting actions.</li>
+                            <li>Offer coins at Prayer altars for efficient Prayer XP.</li>
+                            <li>Items from select shops can be noted.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Requires items to alch, but increased drop rates help.</li>
+                            <li>May involve initial effort to gather alchable items.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Reloaded -->
+                <li>
+                    <input type="checkbox" id="relic4b" class="checkbox">
+                    <label for="relic4b"><strong>Reloaded</strong> &ndash; Choose another relic from any previous tier.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Flexibility to pick an additional relic that complements your playstyle.</li>
+                            <li>Can enhance previous choices or cover areas you missed.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Requires careful selection to maximize benefits.</li>
+                            <li>Does not offer new unique benefits on its own.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Equilibrium -->
+                <li>
+                    <input type="checkbox" id="relic4c" class="checkbox">
+                    <label for="relic4c"><strong>Equilibrium</strong> &ndash; Gain additional experience based on total level.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Each time you gain XP, you gain additional XP equal to 10% of your total level.</li>
+                            <li>Increases to 20% when training your lowest XP skill.</li>
+                            <li>Accelerates overall leveling and reduces grind across all skills.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Additional XP isn't multiplied by the League's XP multiplier.</li>
+                            <li>Doesn't provide direct utility or combat enhancements.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 5 -->
+        <div class="relic">
+            <h3>Tier 5 (Points Unknown)</h3>
+            <ul>
+                <!-- Treasure Arbiter -->
+                <li>
+                    <input type="checkbox" id="relic5a" class="checkbox">
+                    <label for="relic5a"><strong>Treasure Arbiter</strong> &ndash; Enhance clue scroll rewards and efficiency.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Increased chance to obtain clue scrolls.</li>
+                            <li>Clues have the lowest possible steps.</li>
+                            <li>Maximum rewards from caskets.</li>
+                            <li>No item requirements for certain clue steps.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Clue scrolls can still be time-consuming.</li>
+                            <li>Best suited for players who enjoy treasure trails.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Production Master -->
+                <li>
+                    <input type="checkbox" id="relic5b" class="checkbox">
+                    <label for="relic5b"><strong>Production Master</strong> &ndash; Process all items at once in production skills.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Massively reduces time spent on skilling.</li>
+                            <li>Applies to smelting, fletching, cooking, crafting, etc.</li>
+                            <li>Quickly produce items for profit or personal use.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Frees up time for other activities.</li>
+                            <li>If you enjoy skilling, may skip enjoyable processes.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Slayer Master -->
+                <li>
+                    <input type="checkbox" id="relic5c" class="checkbox">
+                    <label for="relic5c"><strong>Slayer Master</strong> &ndash; Enhance Slayer progression and rewards.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Always on task for all eligible Slayer monsters.</li>
+                            <li>Unlock all Slayer perks for free.</li>
+                            <li>Free Slayer store items.</li>
+                            <li>Bonus Slayer XP when killing unique monsters.</li>
+                            <li>Enhances combat progression across all styles.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Slayer tasks can be varied and time-consuming.</li>
+                            <li>If you prefer skilling over combat, benefits may be less impactful.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 6 -->
+        <div class="relic">
+            <h3>Tier 6 (Points Unknown)</h3>
+            <ul>
+                <!-- Total Recall -->
+                <li>
+                    <input type="checkbox" id="relic6a" class="checkbox">
+                    <label for="relic6a"><strong>Total Recall</strong> &ndash; Receive a Crystal of Echoes for strategic teleportation.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Store a location and your stats.</li>
+                            <li>Teleport back to the stored location, restoring stats.</li>
+                            <li>Efficiently return to favorite spots.</li>
+                            <li>Saves time during activities like bossing or skilling.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Requires strategic use to maximize benefits.</li>
+                            <li>May not eliminate the need for banking.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Banker's Note -->
+                <li>
+                    <input type="checkbox" id="relic6b" class="checkbox">
+                    <label for="relic6b"><strong>Banker's Note</strong> &ndash; Note and unnote items anywhere.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Eliminate banking trips entirely.</li>
+                            <li>Enhances efficiency in resource collection.</li>
+                            <li>Highly beneficial for both skilling and combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>May reduce exploration if you rarely need to visit banks.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 7 -->
+        <div class="relic">
+            <h3>Tier 7 (Points Unknown)</h3>
+            <ul>
+                <!-- Pocket Kingdom -->
+                <li>
+                    <input type="checkbox" id="relic7a" class="checkbox">
+                    <label for="relic7a"><strong>Pocket Kingdom</strong> &ndash; Access Managing Miscellania from anywhere.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Workers are more efficient and accrue resources hourly.</li>
+                            <li>Provides passive resource generation.</li>
+                            <li>Gather materials without active effort.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Requires initial investment and management.</li>
+                            <li>Benefits may take time to accumulate.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Grimoire -->
+                <li>
+                    <input type="checkbox" id="relic7b" class="checkbox">
+                    <label for="relic7b"><strong>Grimoire</strong> &ndash; Unlock all spells and prayers for combat versatility.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Access to all spellbooks and prayers.</li>
+                            <li>Freely swap between spellbooks.</li>
+                            <li>Enhances combat for all styles.</li>
+                            <li>No need to complete quests or diaries for spells/prayers.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Benefits Magic combat but also aids other styles.</li>
+                            <li>If you prefer non-combat activities, benefits may be less impactful.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Overgrown -->
+                <li>
+                    <input type="checkbox" id="relic7c" class="checkbox">
+                    <label for="relic7c"><strong>Overgrown</strong> &ndash; Automate Farming with Leprechaun's Vault.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Crops never die.</li>
+                            <li>Automatic harvesting and replanting.</li>
+                            <li>Provides resources for Herblore and other skills.</li>
+                            <li>Reduces the need for active Farming.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>If you enjoy active Farming, may miss out on the experience.</li>
+                            <li>Benefits are more passive and may take time to accumulate.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tier 8 -->
+        <div class="relic">
+            <h3>Tier 8 (Points Unknown)</h3>
+            <ul>
+                <!-- Last Stand -->
+                <li>
+                    <input type="checkbox" id="relic8a" class="checkbox">
+                    <label for="relic8a"><strong>Last Stand</strong> &ndash; Gain a powerful survival ability in combat.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Prevents death when taking fatal damage, reducing you to 1 HP.</li>
+                            <li>Boosts combat stats to 255 temporarily.</li>
+                            <li>Cannot die for 16 ticks (approx. 9.6 seconds).</li>
+                            <li>Heals based on damage dealt during the effect.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Has a cooldown; requires strategic use.</li>
+                            <li>May not be as useful if you avoid risky situations.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Guardian -->
+                <li>
+                    <input type="checkbox" id="relic8b" class="checkbox">
+                    <label for="relic8b"><strong>Guardian</strong> &ndash; Summon a powerful Guardian Thrall for combat.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Adds significant DPS in combat.</li>
+                            <li>Makes boss fights easier and more enjoyable.</li>
+                            <li>Enhances fun with a companion in battle.</li>
+                            <li>Works inside The Gauntlet.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Guardian mechanics might not suit all playstyles.</li>
+                            <li>If you prefer boosting your own abilities, consider other options.</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Specialist -->
+                <li>
+                    <input type="checkbox" id="relic8c" class="checkbox">
+                    <label for="relic8c"><strong>Specialist</strong> &ndash; Enhance special attacks in combat.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>All special attacks cost 20% energy and have +100% accuracy.</li>
+                            <li>Regain special attack energy on failed hits and kills.</li>
+                            <li>Enhances use of special attacks, increasing combat fun.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Requires weapons with valuable special attacks.</li>
+                            <li>If you prefer consistent combat styles, benefits may be less impactful.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+    
+        <div class="section" id="combat-masteries">
+        <h2>Combat Masteries</h2>
+        <p>Combat Masteries offer specialized boosts to combat styles. Players can unlock up to 10 mastery points by completing specific tasks. Each mastery tier builds upon the previous one in its respective combat style. A unique passive bonus is unlocked upon reaching the first mastery in any style.</p>
+
+        <h3>Unlocking Combat Masteries</h3>
+        <ul>
+            <li>Defeat a Giant.</li>
+            <li>Defeat 10 monsters with a combat level of 100+.</li>
+            <li>Defeat Scurrius by yourself.</li>
+            <li>Defeat a monster with a Slayer requirement of 55+.</li>
+            <li>Defeat TzTok-Jad in the Fight Caves.</li>
+            <li>Reach a combat level of 100.</li>
+            <li>Defeat an Echo Boss.</li>
+            <li>Defeat two unique Echo Bosses.</li>
+            <li>Defeat three unique Echo Bosses.</li>
+            <li>Defeat TzKal-Zuk.</li>
+        </ul>
+
+        <div class="relic">
+            <h3>Melee Masteries</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="melee1" class="checkbox">
+                    <label for="melee1"><strong>Melee I</strong> &ndash; Melee hits have a 25% chance to roll damage twice and take the highest result.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Increases overall damage consistency for melee combat.</li>
+                            <li>Reduces the chance of low hits.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Does not guarantee high damage; relies on RNG.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="melee2" class="checkbox">
+                    <label for="melee2"><strong>Melee II</strong> &ndash; Melee hits have a 10% chance to generate an echo hit (Additional melee hit, 50% max-hit, respects Accuracy, PvM only).</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Echo hits provide bonus damage, boosting DPS.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Only applies to PvM (player-versus-monster).</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="melee3" class="checkbox">
+                    <label for="melee3"><strong>Melee III</strong> &ndash; Melee attack rate set to 80%, rounding down.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Speeds up melee attack intervals for faster damage output.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Does not affect all weapons equally due to rounding.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="melee4" class="checkbox">
+                    <label for="melee4"><strong>Melee IV</strong> &ndash; Melee hits have a 5% chance to heal 40% of damage dealt.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Provides passive healing during melee combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Healing chance is relatively low.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="melee5" class="checkbox">
+                    <label for="melee5"><strong>Melee V</strong> &ndash; Melee attack rate set to 50%, rounded down above 5t, rounded up below 4t.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Further reduces melee attack speed for even faster DPS.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Only effective with slower melee weapons.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="melee6" class="checkbox">
+                    <label for="melee6"><strong>Melee VI</strong> &ndash; Your chance to generate a Melee echo increases to 20%, and your echoes can generate additional echoes (Up to 8 times in a row).</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Massive DPS increase through chained echo hits.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Highly RNG-dependent for extended chains.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Ranged Masteries</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="ranged1" class="checkbox">
+                    <label for="ranged1"><strong>Ranged I</strong> &ndash; Damage rolls beneath 30% of max hit with Ranged are increased to 30%.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Improves damage consistency for ranged combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Does not increase maximum damage output.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="ranged2" class="checkbox">
+                    <label for="ranged2"><strong>Ranged II</strong> &ndash; Each subsequent Ranged attack has its max hit increased by an additional 5%. Resets after +20%.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Gradually increases DPS in sustained combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Resets after reaching 20%, requiring sustained combat to maximize.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="ranged3" class="checkbox">
+                    <label for="ranged3"><strong>Ranged III</strong> &ndash; Ranged attack rate set to 80%, rounding down.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Speeds up attack intervals for faster ranged damage output.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Less impactful for already fast weapons due to rounding.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="ranged4" class="checkbox">
+                    <label for="ranged4"><strong>Ranged IV</strong> &ndash; Every 5th Ranged hit, heal 5 hitpoints.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Provides passive healing during ranged combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Only triggers after 5 attacks, limiting frequency.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="ranged5" class="checkbox">
+                    <label for="ranged5"><strong>Ranged V</strong> &ndash; Ranged attack rate set to 50%, rounded down above 5t, rounded up below 4t.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Further reduces ranged attack speed for faster DPS.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>More effective for slower ranged weapons.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="ranged6" class="checkbox">
+                    <label for="ranged6"><strong>Ranged VI</strong> &ndash; Never miss with Ranged (PvM only).</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Ensures consistent hits in PvM combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Does not apply in PvP.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Magic Masteries</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="magic1" class="checkbox">
+                    <label for="magic1"><strong>Magic I</strong> &ndash; When you roll above 90% of your max hit with Magic, damage is increased by 50%.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Boosts Magic DPS significantly on high rolls.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Does not affect low rolls.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="magic2" class="checkbox">
+                    <label for="magic2"><strong>Magic II</strong> &ndash; Magic max hit is increased by 5% per tick in-between your attacks (Up to +40%).</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Boosts damage for slower Magic weapons.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Less effective for faster Magic weapons.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="magic3" class="checkbox">
+                    <label for="magic3"><strong>Magic III</strong> &ndash; Magic attack rate set to 80%, rounding down.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Speeds up attack intervals for faster Magic damage output.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Less impactful for already fast spells.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="magic4" class="checkbox">
+                    <label for="magic4"><strong>Magic IV</strong> &ndash; When you roll above 90% of your max hit with Magic, heal 10% of damage dealt.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Provides passive healing during Magic combat.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Only triggers on high rolls, limiting frequency.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="magic5" class="checkbox">
+                    <label for="magic5"><strong>Magic V</strong> &ndash; Magic attack rate set to 50%, rounded down above 5t, rounded up below 4t.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Further reduces Magic attack speed for faster DPS.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>More effective for slower Magic weapons.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="magic6" class="checkbox">
+                    <label for="magic6"><strong>Magic VI</strong> &ndash; Max hit with Magic is increased by 1% for every 100 Hitpoints remaining on target (Up to 10%). On a successful Magic hit, if your target has less Hitpoints than your max hit, you max hit.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Significant DPS increase against high HP targets.</li>
+                            <li>Ensures maximum damage against low HP targets.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Benefits diminish as target HP decreases.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Passive Buffs</h3>
+            <p>Unlocking the first tier of any combat mastery grants a passive buff to all combat styles:</p>
+            <ul>
+                <li>+5% accuracy and damage for all combat styles.</li>
+                <li>+5% hitpoints regeneration rate.</li>
+                <li>These bonuses stack with other relic and mastery effects.</li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="section" id="regions">
+        <h2>Regions</h2>
+        <p>You can unlock up to three additional regions beyond the starting areas of Misthalin and Karamja. Each region offers unique benefits and activities. Choose based on your preferred playstyle and goals.</p>
+
+        <div class="relic">
+            <h3>Asgarnia</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="asgarnia" class="checkbox">
+                    <label for="asgarnia"><strong>Asgarnia</strong> &ndash; A versatile region with combat and skilling opportunities.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Access to Cerberus, an Echo Boss offering powerful rewards.</li>
+                            <li>Home to the Motherlode Mine, perfect for Mining-related relics like Power Miner.</li>
+                            <li>Includes the Warriors' Guild for defenders and combat training.</li>
+                            <li>Provides access to Pest Control for Void Knight gear with boosted minigame rewards.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Less focus on high-end Magic gear or bosses.</li>
+                            <li>Requires Slayer levels for some content like Cerberus.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Fremennik Isles</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="fremennik" class="checkbox">
+                    <label for="fremennik"><strong>Fremennik Isles</strong> &ndash; Focused on combat and unique content.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Access to Dagannoth Kings, an Echo Boss offering versatile combat challenges and valuable drops.</li>
+                            <li>Provides unique items like Fremennik helms and rings.</li>
+                            <li>Includes Rellekka Slayer Dungeon for a variety of tasks.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Limited skilling opportunities compared to other regions.</li>
+                            <li>Focuses heavily on combat, which may not suit all players.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Kandarin</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="kandarin" class="checkbox">
+                    <label for="kandarin"><strong>Kandarin</strong> &ndash; A well-rounded region with skilling and bossing opportunities.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Thermonuclear Smoke Devil Echo Boss for a mix of combat and utility.</li>
+                            <li>Access to Fishing Guild, Baxtorian Falls, and Seers' Village for skilling.</li>
+                            <li>Includes the Barbarian Assault minigame with boosted rewards.</li>
+                            <li>Home to Zulrah, an efficient and manageable Magic-based boss.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Skilling content may overlap with other regions.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Morytania</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="morytania" class="checkbox">
+                    <label for="morytania"><strong>Morytania</strong> &ndash; A combat-focused region with rewarding activities.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Home to Grotesque Guardians, a unique Echo Boss.</li>
+                            <li>Includes Barrows, offering Magic-based combat rewards.</li>
+                            <li>Hallowed Sepulchre for rewarding agility training.</li>
+                            <li>Strong Slayer opportunities with monsters like Aberrant Spectres and Nechryael.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Requires Slayer levels for some content.</li>
+                            <li>Heavily combat-focused, with limited skilling opportunities.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Kourend and Kebos</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="kourend" class="checkbox">
+                    <label for="kourend"><strong>Kourend and Kebos</strong> &ndash; A versatile region with strong skilling and PvM content.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Hespori Echo Boss for Nature-based rewards.</li>
+                            <li>Access to Farming Guild and Woodcutting Guild for skilling.</li>
+                            <li>Home to Chambers of Xeric with boosted rewards.</li>
+                            <li>Variety of Slayer tasks in Catacombs of Kourend.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Echo Boss and Chambers of Xeric may require advanced setups.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Desert</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="desert" class="checkbox">
+                    <label for="desert"><strong>Desert</strong> &ndash; Unique high-level content with a combat focus.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Access to Kalphite Queen Echo Boss with valuable drops.</li>
+                            <li>Includes Tombs of Amascut for powerful rewards.</li>
+                            <li>Home to Desert Treasure quests and Ancient Magicks.</li>
+                            <li>Boosted rewards from Guardians of the Rift.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>High-level combat challenges may not suit all players.</li>
+                            <li>Limited skilling content compared to other regions.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Wilderness</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="wilderness" class="checkbox">
+                    <label for="wilderness"><strong>Wilderness</strong> &ndash; A risky but rewarding region.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Home to King Black Dragon Echo Boss.</li>
+                            <li>Access to Revenants for profitable drops.</li>
+                            <li>Includes Wilderness Agility Course for training.</li>
+                            <li>Variety of skilling and combat activities in high-risk areas.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>High risk due to PvP mechanics.</li>
+                            <li>Requires caution and preparation for safe participation.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Tirannwn</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="tirannwn" class="checkbox">
+                    <label for="tirannwn"><strong>Tirannwn</strong> &ndash; A challenging region with unique activities.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Access to the Gauntlet and Crystal Weaponry.</li>
+                            <li>Unique skilling content like crystal trees.</li>
+                            <li>Includes Tirannwn agility course.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Content may require advanced setups.</li>
+                            <li>Limited to specific combat and skilling activities.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relic">
+            <h3>Varlamore</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="varlamore" class="checkbox">
+                    <label for="varlamore"><strong>Varlamore</strong> &ndash; The newest region with unique rewards.</label>
+                    <button type="button" class="collapsible">Pros and Cons</button>
+                    <div class="content">
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Home to Sol Heredit, a Grandmaster Echo Boss.</li>
+                            <li>Access to Mastering Mixology for advanced potion-making.</li>
+                            <li>Variety of new skilling activities.</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                            <li>Some content may require high levels or advanced gear.</li>
+                            <li>Less known strategies due to being a new region.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <script>
+        // Checkbox state persistence
+        function saveCheckboxState() {
+            const checkboxes = document.querySelectorAll('.checkbox');
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(checkbox.id, checkbox.checked);
+                });
+            });
+        }
+
+        function loadCheckboxState() {
+            const checkboxes = document.querySelectorAll('.checkbox');
+            checkboxes.forEach((checkbox) => {
+                const checked = localStorage.getItem(checkbox.id) === 'true';
+                checkbox.checked = checked;
+            });
+        }
+
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCheckboxState();
+            saveCheckboxState();
+            setupCollapsibles();
+        });
+    </script>
+        <script>
+        // Tab navigation
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.section).classList.add('active');
+            });
+        });
+
+        // Collapsible content
+        document.querySelectorAll('.collapsible').forEach(collapsible => {
+            collapsible.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
+    
+    
+    
+    
+    <!--- HIGHLIGHTS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Create and style the recommendation buttons
+    const buttons = [
+        { id: "mattButton", text: "Matt's Recommendations", bottom: "100px" },
+        { id: "kevinButton", text: "Kevin's Recommendations", bottom: "60px" },
+        { id: "resetButton", text: "Reset Choices", bottom: "20px", color: "#e74c3c", textColor: "#ffffff" }
+    ];
+
+    buttons.forEach(({ id, text, bottom, color = "#f0c75e", textColor = "#1a1a1a" }) => {
+        const button = document.createElement("button");
+        button.textContent = text;
+        button.id = id;
+        button.style.position = "fixed";
+        button.style.bottom = bottom;
+        button.style.right = "20px";
+        button.style.padding = "10px 15px";
+        button.style.backgroundColor = color;
+        button.style.color = textColor;
+        button.style.border = "none";
+        button.style.borderRadius = "5px";
+        button.style.cursor = "pointer";
+        button.style.fontWeight = "bold";
+        button.style.zIndex = 1000;
+        document.body.appendChild(button);
+    });
+
+    // Recommendations for Matt
+    const mattRecommendations = {
+        relics: [
+            { id: "relic1a", reason: "Minimizes grind in Mining and gathers valuable resources." },
+            { id: "relic2a", reason: "Provides passive herb gathering and improves potion crafting efficiency." }, // Friendly Forager
+            { id: "relic3c", reason: "Allows teleportation to clue steps and STASH units for quick clue-solving." }, // Clue Compass
+            { id: "relic4a", reason: "Provides passive money-making and efficient Prayer training." },
+            { id: "relic5b", reason: "Massively reduces time spent on skilling." },
+            { id: "relic6b", reason: "Eliminates banking trips, enhancing efficiency." },
+            { id: "relic7b", reason: "Unlocks all spells and prayers for combat versatility." },
+            { id: "relic8b", reason: "Adds a fun companion to simplify combat." }
+        ],
+        regions: [
+            { id: "kandarin", reason: "Diverse content with enjoyable activities and manageable bosses." },
+            { id: "morytania", reason: "Engaging bosses like Barrows and additional Slayer opportunities." },
+            { id: "fremennik", reason: "Versatile combat challenges and valuable drops." }
+        ],
+        combatMasteries: [
+            { id: "magic1", reason: "Boosts damage on high rolls for efficient Magic combat." },
+            { id: "magic2", reason: "Increases max hit based on attack delay." },
+            { id: "magic3", reason: "Speeds up Magic attack intervals for faster DPS." },
+            { id: "magic4", reason: "Provides passive healing on high Magic rolls." },
+            { id: "magic5", reason: "Reduces Magic attack delay for higher DPS." },
+            { id: "ranged3", reason: "Improves Ranged attack intervals for versatility." }
+        ]
+    };
+
+    // Recommendations for Kevin
+    const kevinRecommendations = {
+        relics: [
+            { id: "relic1a", reason: "Improves early-game resource gathering for Melee builds." },
+            { id: "relic2a", reason: "Ensures efficient use of potions and secondary ingredients." },
+            { id: "relic3b", reason: "Improves access to banks for better inventory management." },
+            { id: "relic4a", reason: "Allows passive money-making and effective Prayer use for raids." },
+            { id: "relic5b", reason: "Speeds up production of potions and supplies for consistent raiding." },
+            { id: "relic6b", reason: "Eliminates inventory clutter during high-level PvM activities." },
+            { id: "relic7b", reason: "Provides flexibility with all spells and prayers unlocked." },
+            { id: "relic8a", reason: "Boosts survivability with the Last Stand ability for high-damage encounters." }
+        ],
+        regions: [
+            { id: "morytania", reason: "Essential for Melee-focused PvM and raids like Theatre of Blood." },
+            { id: "tirannwn", reason: "Provides access to the Gauntlet and Crystal Weaponry for versatility." },
+            { id: "fremennik", reason: "Versatile content including Dagannoth Kings and rings for Melee builds." }
+        ],
+        combatMasteries: [
+            { id: "melee1", reason: "Increases Melee damage consistency for bossing." },
+            { id: "melee2", reason: "Adds extra damage through echo hits, enhancing DPS." },
+            { id: "melee3", reason: "Speeds up Melee attack intervals for raids and PvM." },
+            { id: "melee4", reason: "Provides passive healing during prolonged boss fights." },
+            { id: "melee5", reason: "Further reduces Melee attack intervals for increased DPS." },
+            { id: "melee6", reason: "Massive DPS boost with chainable echo hits for Melee." }
+        ]
+    };
+
+    // Highlighting functions
+    function highlightRecommendations(recommendations) {
+        clearHighlights();
+        recommendations.relics.forEach(({ id, reason }) => highlightElement(id, reason));
+        recommendations.regions.forEach(({ id, reason }) => highlightElement(id, reason));
+        recommendations.combatMasteries.forEach(({ id, reason }) => highlightElement(id, reason));
+    }
+
+    function highlightElement(id, reason) {
+        const element = document.getElementById(id)?.parentElement;
+        if (element) {
+            element.style.boxShadow = "0 0 15px 5px #f0c75e";
+            element.style.borderRadius = "8px";
+            if (!element.querySelector(".recommendation-reason")) {
+                const reasonDiv = document.createElement("div");
+                reasonDiv.textContent = reason;
+                reasonDiv.style.fontSize = "12px";
+                reasonDiv.style.marginTop = "5px";
+                reasonDiv.style.color = "#f0c75e";
+                reasonDiv.classList.add("recommendation-reason");
+                element.appendChild(reasonDiv);
+            }
+        }
+    }
+
+    function clearHighlights() {
+        document.querySelectorAll(".recommendation-reason").forEach(reason => reason.remove());
+        document.querySelectorAll(".checkbox").forEach(checkbox => {
+            const parent = checkbox.parentElement;
+            if (parent) {
+                parent.style.boxShadow = "none";
+                parent.style.borderRadius = "none";
+            }
+        });
+    }
+
+    function resetChoices() {
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
+    }
+
+    // Attach events
+    document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
+    document.getElementById("kevinButton").addEventListener("click", () => highlightRecommendations(kevinRecommendations));
+    document.getElementById("resetButton").addEventListener("click", resetChoices);
+});
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
