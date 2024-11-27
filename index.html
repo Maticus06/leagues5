@@ -1304,133 +1304,133 @@
     
     
     <!--- HIGHLIGHTS -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Create and style the recommendation buttons
-    const buttons = [
-        { id: "mattButton", text: "Matt's Recommendations", bottom: "100px" },
-        { id: "kevinButton", text: "Kevin's Recommendations", bottom: "60px" },
-        { id: "resetButton", text: "Reset Choices", bottom: "20px", color: "#e74c3c", textColor: "#ffffff" }
-    ];
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Create and style the recommendation buttons
+        const buttons = [
+            { id: "mattButton", text: "Matt's Recommendations", bottom: "100px" },
+            { id: "kevinButton", text: "Kevin's Recommendations", bottom: "60px" },
+            { id: "resetButton", text: "Reset Choices", bottom: "20px", color: "#e74c3c", textColor: "#ffffff" }
+        ];
 
-    buttons.forEach(({ id, text, bottom, color = "#f0c75e", textColor = "#1a1a1a" }) => {
-        const button = document.createElement("button");
-        button.textContent = text;
-        button.id = id;
-        button.style.position = "fixed";
-        button.style.bottom = bottom;
-        button.style.right = "20px";
-        button.style.padding = "10px 15px";
-        button.style.backgroundColor = color;
-        button.style.color = textColor;
-        button.style.border = "none";
-        button.style.borderRadius = "5px";
-        button.style.cursor = "pointer";
-        button.style.fontWeight = "bold";
-        button.style.zIndex = 1000;
-        document.body.appendChild(button);
-    });
+        buttons.forEach(({ id, text, bottom, color = "#f0c75e", textColor = "#1a1a1a" }) => {
+            const button = document.createElement("button");
+            button.textContent = text;
+            button.id = id;
+            button.style.position = "fixed";
+            button.style.bottom = bottom;
+            button.style.right = "20px";
+            button.style.padding = "10px 15px";
+            button.style.backgroundColor = color;
+            button.style.color = textColor;
+            button.style.border = "none";
+            button.style.borderRadius = "5px";
+            button.style.cursor = "pointer";
+            button.style.fontWeight = "bold";
+            button.style.zIndex = 1000;
+            document.body.appendChild(button);
+        });
 
-    // Recommendations for Matt
-    const mattRecommendations = {
-        relics: [
-            { id: "relic1a", reason: "Minimizes grind in Mining and gathers valuable resources." },
-            { id: "relic2a", reason: "Provides passive herb gathering and improves potion crafting efficiency." }, // Friendly Forager
-            { id: "relic3c", reason: "Allows teleportation to clue steps and STASH units for quick clue-solving." }, // Clue Compass
-            { id: "relic4a", reason: "Provides passive money-making and efficient Prayer training." },
-            { id: "relic5b", reason: "Massively reduces time spent on skilling." },
-            { id: "relic6b", reason: "Eliminates banking trips, enhancing efficiency." },
-            { id: "relic7b", reason: "Unlocks all spells and prayers for combat versatility." },
-            { id: "relic8b", reason: "Adds a fun companion to simplify combat." }
-        ],
-        regions: [
-            { id: "kandarin", reason: "Diverse content with enjoyable activities and manageable bosses." },
-            { id: "morytania", reason: "Engaging bosses like Barrows and additional Slayer opportunities." },
-            { id: "fremennik", reason: "Versatile combat challenges and valuable drops." }
-        ],
-        combatMasteries: [
-            { id: "magic1", reason: "Boosts damage on high rolls for efficient Magic combat." },
-            { id: "magic2", reason: "Increases max hit based on attack delay." },
-            { id: "magic3", reason: "Speeds up Magic attack intervals for faster DPS." },
-            { id: "magic4", reason: "Provides passive healing on high Magic rolls." },
-            { id: "magic5", reason: "Reduces Magic attack delay for higher DPS." },
-            { id: "ranged3", reason: "Improves Ranged attack intervals for versatility." }
-        ]
-    };
+        // Recommendations for Matt
+        const mattRecommendations = {
+            relics: [
+                { id: "relic1a", reason: "Minimizes grind in Mining and gathers valuable resources." },
+                { id: "relic2a", reason: "Provides passive herb gathering and improves potion crafting efficiency." }, // Friendly Forager
+                { id: "relic3c", reason: "Allows teleportation to clue steps and STASH units for quick clue-solving." }, // Clue Compass
+                { id: "relic4a", reason: "Provides passive money-making and efficient Prayer training." },
+                { id: "relic5b", reason: "Massively reduces time spent on skilling." },
+                { id: "relic6b", reason: "Eliminates banking trips, enhancing efficiency." },
+                { id: "relic7b", reason: "Unlocks all spells and prayers for combat versatility." },
+                { id: "relic8b", reason: "Adds a fun companion to simplify combat." }
+            ],
+            regions: [
+                { id: "kandarin", reason: "First: Diverse content with enjoyable activities and manageable bosses." },
+                { id: "morytania", reason: "Second: Engaging bosses like Barrows and additional Slayer opportunities." },
+                { id: "fremennik", reason: "Third: Versatile combat challenges and valuable drops." }
+            ],
+            combatMasteries: [
+                { id: "magic1", reason: "Boosts damage on high rolls for efficient Magic combat." },
+                { id: "magic2", reason: "Increases max hit based on attack delay." },
+                { id: "magic3", reason: "Speeds up Magic attack intervals for faster DPS." },
+                { id: "magic4", reason: "Provides passive healing on high Magic rolls." },
+                { id: "magic5", reason: "Reduces Magic attack delay for higher DPS." },
+                { id: "ranged1", reason: "Improves Ranged attack intervals for versatility." }
+            ]
+        };
 
-    // Recommendations for Kevin
-    const kevinRecommendations = {
-        relics: [
-            { id: "relic1a", reason: "Improves early-game resource gathering for Melee builds." },
-            { id: "relic2a", reason: "Ensures efficient use of potions and secondary ingredients." },
-            { id: "relic3b", reason: "Improves access to banks for better inventory management." },
-            { id: "relic4a", reason: "Allows passive money-making and effective Prayer use for raids." },
-            { id: "relic5b", reason: "Speeds up production of potions and supplies for consistent raiding." },
-            { id: "relic6b", reason: "Eliminates inventory clutter during high-level PvM activities." },
-            { id: "relic7b", reason: "Provides flexibility with all spells and prayers unlocked." },
-            { id: "relic8a", reason: "Boosts survivability with the Last Stand ability for high-damage encounters." }
-        ],
-        regions: [
-            { id: "morytania", reason: "Essential for Melee-focused PvM and raids like Theatre of Blood." },
-            { id: "tirannwn", reason: "Provides access to the Gauntlet and Crystal Weaponry for versatility." },
-            { id: "fremennik", reason: "Versatile content including Dagannoth Kings and rings for Melee builds." }
-        ],
-        combatMasteries: [
-            { id: "melee1", reason: "Increases Melee damage consistency for bossing." },
-            { id: "melee2", reason: "Adds extra damage through echo hits, enhancing DPS." },
-            { id: "melee3", reason: "Speeds up Melee attack intervals for raids and PvM." },
-            { id: "melee4", reason: "Provides passive healing during prolonged boss fights." },
-            { id: "melee5", reason: "Further reduces Melee attack intervals for increased DPS." },
-            { id: "melee6", reason: "Massive DPS boost with chainable echo hits for Melee." }
-        ]
-    };
+        // Recommendations for Kevin
+        const kevinRecommendations = {
+            relics: [
+                { id: "relic1a", reason: "Improves early-game resource gathering for Melee builds." },
+                { id: "relic2a", reason: "Ensures efficient use of potions and secondary ingredients." },
+                { id: "relic3b", reason: "Improves access to banks for better inventory management." },
+                { id: "relic4a", reason: "Allows passive money-making and effective Prayer use for raids." },
+                { id: "relic5b", reason: "Speeds up production of potions and supplies for consistent raiding." },
+                { id: "relic6b", reason: "Eliminates inventory clutter during high-level PvM activities." },
+                { id: "relic7b", reason: "Provides flexibility with all spells and prayers unlocked." },
+                { id: "relic8a", reason: "Boosts survivability with the Last Stand ability for high-damage encounters." }
+            ],
+            regions: [
+                { id: "morytania", reason: "First: Essential for Melee-focused PvM and raids like Theatre of Blood." },
+                { id: "tirannwn", reason: "Second: Provides access to the Gauntlet and Crystal Weaponry for versatility." },
+                { id: "fremennik", reason: "Third: Versatile content including Dagannoth Kings and rings for Melee builds." }
+            ],
+            combatMasteries: [
+                { id: "melee1", reason: "Increases Melee damage consistency for bossing." },
+                { id: "melee2", reason: "Adds extra damage through echo hits, enhancing DPS." },
+                { id: "melee3", reason: "Speeds up Melee attack intervals for raids and PvM." },
+                { id: "melee4", reason: "Provides passive healing during prolonged boss fights." },
+                { id: "melee5", reason: "Further reduces Melee attack intervals for increased DPS." },
+                { id: "melee6", reason: "Massive DPS boost with chainable echo hits for Melee." }
+            ]
+        };
 
-    // Highlighting functions
-    function highlightRecommendations(recommendations) {
-        clearHighlights();
-        recommendations.relics.forEach(({ id, reason }) => highlightElement(id, reason));
-        recommendations.regions.forEach(({ id, reason }) => highlightElement(id, reason));
-        recommendations.combatMasteries.forEach(({ id, reason }) => highlightElement(id, reason));
-    }
+        // Highlighting functions
+        function highlightRecommendations(recommendations) {
+            clearHighlights();
+            recommendations.relics.forEach(({ id, reason }) => highlightElement(id, reason));
+            recommendations.regions.forEach(({ id, reason }) => highlightElement(id, reason));
+            recommendations.combatMasteries.forEach(({ id, reason }) => highlightElement(id, reason));
+        }
 
-    function highlightElement(id, reason) {
-        const element = document.getElementById(id)?.parentElement;
-        if (element) {
-            element.style.boxShadow = "0 0 15px 5px #f0c75e";
-            element.style.borderRadius = "8px";
-            if (!element.querySelector(".recommendation-reason")) {
-                const reasonDiv = document.createElement("div");
-                reasonDiv.textContent = reason;
-                reasonDiv.style.fontSize = "12px";
-                reasonDiv.style.marginTop = "5px";
-                reasonDiv.style.color = "#f0c75e";
-                reasonDiv.classList.add("recommendation-reason");
-                element.appendChild(reasonDiv);
+        function highlightElement(id, reason) {
+            const element = document.getElementById(id)?.parentElement;
+            if (element) {
+                element.style.boxShadow = "0 0 15px 5px #f0c75e";
+                element.style.borderRadius = "8px";
+                if (!element.querySelector(".recommendation-reason")) {
+                    const reasonDiv = document.createElement("div");
+                    reasonDiv.textContent = reason;
+                    reasonDiv.style.fontSize = "12px";
+                    reasonDiv.style.marginTop = "5px";
+                    reasonDiv.style.color = "#f0c75e";
+                    reasonDiv.classList.add("recommendation-reason");
+                    element.appendChild(reasonDiv);
+                }
             }
         }
-    }
 
-    function clearHighlights() {
-        document.querySelectorAll(".recommendation-reason").forEach(reason => reason.remove());
-        document.querySelectorAll(".checkbox").forEach(checkbox => {
-            const parent = checkbox.parentElement;
-            if (parent) {
-                parent.style.boxShadow = "none";
-                parent.style.borderRadius = "none";
-            }
-        });
-    }
+        function clearHighlights() {
+            document.querySelectorAll(".recommendation-reason").forEach(reason => reason.remove());
+            document.querySelectorAll(".checkbox").forEach(checkbox => {
+                const parent = checkbox.parentElement;
+                if (parent) {
+                    parent.style.boxShadow = "none";
+                    parent.style.borderRadius = "none";
+                }
+            });
+        }
 
-    function resetChoices() {
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
-    }
+        function resetChoices() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
+        }
 
-    // Attach events
-    document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
-    document.getElementById("kevinButton").addEventListener("click", () => highlightRecommendations(kevinRecommendations));
-    document.getElementById("resetButton").addEventListener("click", resetChoices);
-});
-</script>
+        // Attach events
+        document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
+        document.getElementById("kevinButton").addEventListener("click", () => highlightRecommendations(kevinRecommendations));
+        document.getElementById("resetButton").addEventListener("click", resetChoices);
+    });
+    </script>
 
 
 
