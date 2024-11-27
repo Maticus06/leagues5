@@ -1308,8 +1308,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Create and style the recommendation buttons
     const buttons = [
-        { id: "mattButton", text: "Matt's Recommendations", bottom: "100px" },
-        { id: "kevinButton", text: "Kevin's Recommendations", bottom: "60px" },
+        { id: "mattButton", text: "Matt's Recommendations", bottom: "140px" },
+        { id: "kevinButton", text: "Kevin's Recommendations", bottom: "100px" },
+        { id: "casualButton", text: "The Filthy Casual", bottom: "60px" },
         { id: "resetButton", text: "Reset Choices", bottom: "20px", color: "#e74c3c", textColor: "#ffffff" }
     ];
 
@@ -1425,6 +1426,70 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
+        // Recommendations for The Filthy Casual
+    const casualRecommendations = {
+        relics: [
+            {
+                id: "relic1b",
+                reason: "Lumberjack: Perfect for gathering resources effortlessly. Enjoy automating Firemaking and Fletching tasks while exploring the peaceful side of the game."
+            },
+            {
+                id: "relic2c",
+                reason: "Dodgy Deals: Maximize fun with mass pickpocketing and easy money-making. Great for casually engaging with townsfolk and discovering hidden treasures."
+            },
+            {
+                id: "relic3a",
+                reason: "Fairy's Flight: Unlocks travel to fairy rings and spirit trees, making exploration and skilling much more accessible and enjoyable."
+            },
+            {
+                id: "relic4c",
+                reason: "Equilibrium: Grants balanced XP gains, perfect for casual players who want to skill and progress in a variety of areas without heavy focus on combat."
+            },
+            {
+                id: "relic5a",
+                reason: "Treasure Arbiter: Perfect for clue scroll enthusiasts, maximizing treasure hunt rewards for hours of casual exploration and fun."
+            },
+            {
+                id: "relic6a",
+                reason: "Total Recall: Return to favorite skilling or exploration spots with ease, saving time while casually exploring different regions."
+            },
+            {
+                id: "relic7a",
+                reason: "Pocket Kingdom: Allows managing Miscellania anywhere, generating resources passively while focusing on lighthearted gameplay."
+            },
+            {
+                id: "relic8c",
+                reason: "Specialist: Adds an extra layer of fun to combat with enhanced special attacks, making casual bossing and PvM enjoyable without intensity."
+            }
+        ],
+        regions: [
+            {
+                id: "kandarin",
+                reason: "First: Access fun activities like the Fishing Guild, Seers' Village for rooftop agility, and clue scroll rewards. It's a well-rounded region for casual exploration."
+            },
+            {
+                id: "fremennik",
+                reason: "Second: Offers rock crabs for laid-back training, access to Fremennik helms, and enjoyable Slayer tasks. A good mix of skilling and light combat."
+            },
+            {
+                id: "kourend",
+                reason: "Third: Great for group skilling activities like aerial fishing and Farming Guild tasks. A versatile region for casual, cooperative gameplay."
+            }
+        ],
+        combatMasteries: [
+            { id: "magic1", reason: "1. Start with enhanced Magic damage for casual combat effectiveness during exploration or small boss fights." },
+            { id: "ranged1", reason: "2. Consistent Ranged damage is great for light Slayer tasks and occasional bossing." },
+            { id: "magic2", reason: "3. Boosted max hits add extra excitement to casual bossing and PvM encounters." },
+            { id: "melee1", reason: "4. Reliable Melee damage consistency for easy training and fun Slayer tasks." },
+            { id: "magic3", reason: "5. Faster Magic attack intervals make combat enjoyable and less tedious." },
+            { id: "ranged3", reason: "6. Faster Ranged attack intervals add efficiency to casual PvM activities." },
+            { id: "ranged4", reason: "7. Passive healing during Ranged combat ensures survivability without intense gameplay." },
+            { id: "melee4", reason: "8. Adds healing during Melee encounters, perfect for longer casual fights." },
+            { id: "magic4", reason: "9. Healing on high Magic rolls makes prolonged combat more sustainable." },
+            { id: "ranged5", reason: "10. Faster Ranged attacks provide quick and satisfying damage output in lighter battles." }
+        ]
+    };
+    
     // Recommendations for Kevin
     const kevinRecommendations = {
         relics: [
@@ -1540,8 +1605,9 @@ function resetChoices() {
     // Attach events
     document.getElementById("mattButton").addEventListener("click", () => highlightRecommendations(mattRecommendations));
     document.getElementById("kevinButton").addEventListener("click", () => highlightRecommendations(kevinRecommendations));
+    document.getElementById("casualButton").addEventListener("click", () => highlightRecommendations(casualRecommendations));
     document.getElementById("resetButton").addEventListener("click", resetChoices);
-    });
+});
 </script>
 
 
